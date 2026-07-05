@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Guest Sentiment Analytics Engine</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b1329; }
+        .glass-card {
+            background: rgba(28, 37, 65, 0.45);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow-emerald { box-shadow: 0 0 20px rgba(16, 185, 129, 0.15); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(11, 19, 41, 0.5); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #3a506b; border-radius: 3px; }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen antialiased custom-scrollbar">
+
+    <nav class="w-full border-b border-slate-800/80 bg-slate-950/60 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-emerald-500/10 p-2 rounded-lg border border-emerald-500/20">
+                    <span class="text-xl">🧠</span>
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight text-white block">SentixEngine <span class="text-emerald-400 text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 ml-1.5">v1.2.0</span></span>
+                    <span class="text-xs text-slate-400 block -mt-0.5">Hybrid NLP Hotel Reputation Diagnostics</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-6 text-xs font-medium text-slate-400">
+                <span class="text-emerald-400 border-b-2 border-emerald-400 pb-4 pt-1 cursor-pointer">Dashboard Overview</span>
+                <span class="hover:text-slate-200 transition cursor-pointer">Batch Datasets</span>
+                <span class="hover:text-slate-200 transition cursor-pointer">Model Telemetry</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <section class="lg:col-span-1 space-y-6">
+            <div class="glass-card p-6 rounded-2xl shadow-2xl space-y-5">
+    <div>
+        <h2 class="text-base font-semibold text-white">Data Ingestion Workspace</h2>
+        <p class="text-xs text-slate-400 mt-0.5">Submit single logs or batch spreadsheets into the system</p>
+    </div>
+
+    <div class="flex border-b border-slate-800 text-xs font-semibold">
+        <button onclick="switchTab('single-view')" id="tab-single" class="text-emerald-400 border-b-2 border-emerald-400 pb-2.5 px-2 transition-all cursor-pointer">Single Text</button>
+        <button onclick="switchTab('bulk-view')" id="tab-bulk" class="text-slate-400 hover:text-slate-200 pb-2.5 px-4 transition-all cursor-pointer">Spreadsheet Upload</button>
+    </div>
+
+    <form id="form-single" method="POST" class="space-y-4">
+        <div class="space-y-1.5">
+            <label class="text-xs font-medium text-slate-400 uppercase tracking-wider">Raw Text Review</label>
+            <textarea name="review_text" rows="6" required
+                class="w-full p-4 rounded-xl border border-slate-700/60 bg-slate-950/50 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition placeholder-slate-600 leading-relaxed custom-scrollbar"
+                placeholder="Type or paste hotel review data here..."></textarea>
+        </div>
+        <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-3 px-4 rounded-xl transition text-xs uppercase tracking-wider cursor-pointer shadow-lg shadow-emerald-500/10">
+            Execute Hybrid Extraction
+        </button>
+    </form>
+
+    <form id="form-bulk" method="POST" enctype="multipart/form-data" class="space-y-4 hidden">
+        <div class="space-y-1.5">
+            <label class="text-xs font-medium text-slate-400 uppercase tracking-wider">Upload Dataset (.csv, .xlsx)</label>
+            <div class="w-full border-2 border-dashed border-slate-700 hover:border-indigo-500/50 rounded-xl bg-slate-950/30 p-6 text-center transition group relative cursor-pointer">
+                <input type="file" name="spreadsheet_file" accept=".csv, .xlsx, .xls" required
+                    class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" id="file-input-field">
+                <span class="text-2xl block mb-1">📊</span>
+                <span class="text-xs font-medium text-slate-300 block" id="file-status-label">Drag & Drop file or click to browse</span>
+                <span class="text-[10px] text-slate-500 block mt-1">Accepts standard Excel or CSV sheets containing a 'Review' column</span>
+            </div>
+        </div>
+        <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl transition text-xs uppercase tracking-wider cursor-pointer shadow-lg shadow-indigo-500/10">
+            Ingest & Batch Process
+        </button>
+    </form>
+
+    <div class="pt-4 border-t border-slate-800/80 space-y-3">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Operational Repository Log</span>
+        <div class="grid grid-cols-3 gap-2 text-center">
+            <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/50">
+                <span class="text-xs text-slate-400 block">Positive</span>
+                <span class="text-base font-bold text-emerald-400 mt-0.5 block">{{ s_data['Positive'] }}</span>
+            </div>
+            <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/50">
+                <span class="text-xs text-slate-400 block">Negative</span>
+                <span class="text-base font-bold text-rose-400 mt-0.5 block">{{ s_data['Negative'] }}</span>
+            </div>
+            <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/50">
+                <span class="text-xs text-slate-400 block">Neutral</span>
+                <span class="text-base font-bold text-amber-400 mt-0.5 block">{{ s_data['Neutral'] }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function switchTab(viewMode) {
+        const formSingle = document.getElementById('form-single');
+        const formBulk = document.getElementById('form-bulk');
+        const tabSingle = document.getElementById('tab-single');
+        const tabBulk = document.getElementById('tab-bulk');
+
+        if(viewMode === 'single-view') {
+            formSingle.classList.remove('hidden');
+            formBulk.classList.add('hidden');
+            tabSingle.className = "text-emerald-400 border-b-2 border-emerald-400 pb-2.5 px-2 transition-all cursor-pointer";
+            tabBulk.className = "text-slate-400 hover:text-slate-200 pb-2.5 px-4 transition-all cursor-pointer";
+        } else {
+            formSingle.classList.add('hidden');
+            formBulk.classList.remove('hidden');
+            tabSingle.className = "text-slate-400 hover:text-slate-200 pb-2.5 px-4 transition-all cursor-pointer";
+            tabBulk.className = "text-indigo-400 border-b-2 border-indigo-400 pb-2.5 px-2 transition-all cursor-pointer";
+        }
+    }
+
+    // Dynamic file-selection display monitor
+    document.getElementById('file-input-field').addEventListener('change', function(e) {
+        const statusLabel = document.getElementById('file-status-label');
+        if(e.target.files.length > 0) {
+            statusLabel.innerText = "Selected: " + e.target.files[0].name;
+            statusLabel.classList.add('text-indigo-400');
+        }
+    });
+</script>
+
+            <div class="glass-card p-6 rounded-2xl shadow-xl space-y-4">
+                <div>
+                    <h3 class="text-sm font-semibold text-white tracking-tight">Keyword Density Token Cloud</h3>
+                    <p class="text-xs text-slate-500 mt-0.5">Most recurrent keywords filtered by stop-word removal</p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-2">
+                    {% if cloud_words %}
+                        {% for word, count in cloud_words %}
+                        <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-950/50 border border-slate-800 hover:border-indigo-500/40 transition cursor-default">
+                            <span class="text-indigo-400">#</span>{{ word }}
+                            <span class="ml-1 text-[10px] text-slate-500 font-bold bg-slate-900 px-1 rounded">{{ count }}</span>
+                        </span>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-xs text-slate-600 italic">Inject more data records to populate cloud matrices.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <section class="lg:col-span-2 space-y-6">
+
+            {% if result %}
+            <div class="glass-card border-l-4 border-l-emerald-500 p-6 rounded-2xl shadow-2xl neon-glow-emerald space-y-5">
+                <div class="flex flex-wrap justify-between items-start gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block">Linguistic Diagnostics Array</span>
+                        <h2 class="text-lg font-bold text-white mt-0.5">Computational Record Identified</h2>
+                    </div>
+                    <div class="px-4 py-1.5 rounded-xl text-xs font-bold border tracking-wide uppercase
+                        {% if result.sentiment == 'Positive' %} bg-emerald-500/10 text-emerald-400 border-emerald-500/20
+                        {% elif result.sentiment == 'Negative' %} bg-rose-500/10 text-rose-400 border-rose-500/20
+                        {% else %} bg-amber-500/10 text-amber-400 border-amber-500/20 {% endif %}">
+                        {{ result.sentiment }} ({{ result.confidence }}% Score)
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-950/40 border border-slate-800/60">
+                    <p class="text-sm text-slate-300 leading-relaxed italic">"{{ result.raw_text }}"</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                    <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800/40">
+                        <span class="text-slate-400 block mb-1">Structural Subjectivity:</span>
+                        <span class="text-sm font-semibold text-white">{{ result.subjectivity }}%</span>
+                    </div>
+                    <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800/40 sm:col-span-2">
+                        <span class="text-slate-400 block mb-1.5">Aspect Tags Isolated:</span>
+                        <div class="flex flex-wrap gap-1.5">
+                            {% for aspect in result.aspects %}
+                            <span class="bg-slate-800 text-slate-200 px-2.5 py-0.5 rounded-md border border-slate-700 font-medium text-[11px]">{{ aspect }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-emerald-950/10 border border-emerald-500/20 space-y-1.5">
+                    <div class="flex items-center gap-1.5 text-xs font-bold text-emerald-400 uppercase tracking-wider">
+                        <span>🤖</span>
+                        <span>Auto-Generated Executive Response Draft</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">{{ result.reply_draft }}</p>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 rounded-2xl shadow-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-300 tracking-tight">Sentiment Compound Share</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Database distribution volume shares</p>
+                    </div>
+                    <div class="max-w-[170px] w-full mx-auto my-4">
+                        <canvas id="sentimentPieChart"></canvas>
+                    </div>
+                    <div class="flex justify-center gap-4 text-xs font-medium text-slate-400 pt-3 border-t border-slate-800/40">
+                        <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>Pos</div>
+                        <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>Neg</div>
+                        <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>Neu</div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl shadow-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-300 tracking-tight">Aspect Matrix Density</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Incident mention frequency across schemas</p>
+                    </div>
+                    <div class="w-full mt-4 h-[180px]">
+                        <canvas id="aspectsBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl shadow-xl">
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-300 tracking-tight">Temporal Sentiment Trend Monitor</h3>
+                    <p class="text-xs text-slate-500 mt-0.5">Chronological frequency log of reviews passing down the pipeline</p>
+                </div>
+                <div class="w-full mt-6 h-[220px]">
+                    <canvas id="timelineTrendChart"></canvas>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const totalSentiments = {{ s_data['Positive'] }} + {{ s_data['Negative'] }} + {{ s_data['Neutral'] }};
+
+        // 1. Doughnut Chart Allocation
+        const ctxPie = document.getElementById('sentimentPieChart').getContext('2d');
+        new Chart(ctxPie, {
+            type: 'doughnut',
+            data: {
+                labels: ['Positive', 'Negative', 'Neutral'],
+                datasets: [{
+                    data: totalSentiments > 0 ? [{{ s_data['Positive'] }}, {{ s_data['Negative'] }}, {{ s_data['Neutral'] }}] : [1, 1, 1],
+                    backgroundColor: totalSentiments > 0 ? ['#10b981', '#f43f5e', '#f59e0b'] : ['#1e293b', '#334155', '#475569'],
+                    borderWidth: 0
+                }]
+            },
+            options: { cutout: '75%', plugins: { legend: { display: false } } }
+        });
+
+        // 2. Bar Chart Allocation
+        const ctxBar = document.getElementById('aspectsBarChart').getContext('2d');
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['Staff', 'Rooms', 'Food', 'Price', 'General'],
+                datasets: [{
+                    data: [{{ a_data['Staff & Service'] }}, {{ a_data['Cleanliness & Room'] }}, {{ a_data['Food & Dining'] }}, {{ a_data['Value & Price'] }}, {{ a_data['General'] }}],
+                    backgroundColor: 'rgba(99, 102, 241, 0.85)',
+                    hoverBackgroundColor: '#6366f1',
+                    borderRadius: 6,
+                    barThickness: 14
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { grid: { color: 'rgba(255, 255, 255, 0.04)' }, ticks: { color: '#64748b', font: { size: 10 }, stepSize: 1 } },
+                    x: { grid: { display: false }, ticks: { color: '#94a3b8', font: { size: 11 } } }
+                },
+                plugins: { legend: { display: false } }
+            }
+        });
+
+        // 3. NEW FEATURE CHART: Time-Series Timeline Chart Data Configuration
+        const ctxLine = document.getElementById('timelineTrendChart').getContext('2d');
+        new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: [{% for item in timeline_data %}"{{ item[0] }}",{% endfor %}],
+                datasets: [
+                    {
+                        label: 'Positive Vol.',
+                        data: [{% for item in timeline_data %}{{ item[1] }},{% endfor %}],
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.05)',
+                        tension: 0.3,
+                        fill: true
+                    },
+                    {
+                        label: 'Negative Vol.',
+                        data: [{% for item in timeline_data %}{{ item[2] }},{% endfor %}],
+                        borderColor: '#f43f5e',
+                        backgroundColor: 'rgba(244, 63, 94, 0.05)',
+                        tension: 0.3,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { grid: { color: 'rgba(255, 255, 255, 0.04)' }, ticks: { color: '#64748b', font: { size: 10 }, stepSize: 1 } },
+                    x: { grid: { color: 'rgba(255, 255, 255, 0.04)' }, ticks: { color: '#64748b', font: { size: 10 } } }
+                },
+                plugins: { legend: { labels: { color: '#94a3b8', font: { size: 11 } } } }
+            }
+        });
+    </script>
+</body>
+</html>
