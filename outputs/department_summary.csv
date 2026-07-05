@@ -1,0 +1,6 @@
+department,total_reviews,avg_rating,avg_sentiment_score,positive_count,negative_count,neutral_count
+Housekeeping,120,3.67,0.531,77,16,27
+Spa & Wellness,125,3.52,0.483,78,23,24
+F&B / Restaurant,129,3.5,0.401,75,28,26
+Front Desk,117,3.44,0.359,69,29,19
+Concierge,109,3.55,0.358,64,27,18

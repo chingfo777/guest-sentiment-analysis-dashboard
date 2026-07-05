@@ -1,0 +1,601 @@
+review_id,date,department,rating,review_text,sentiment_score,sentiment_label
+2,2024-01-02,Housekeeping,5,Check-in was fast and seamless regarding housekeeping.,1.0,Positive
+53,2024-01-02,Front Desk,4,Room was spotless and beautifully maintained regarding front desk. Thank you to the team.,1.0,Positive
+438,2024-01-02,F&B / Restaurant,5,The spa treatment was relaxing and professional regarding f&b / restaurant.,1.0,Positive
+384,2024-01-03,Spa & Wellness,1,Billing error took days to resolve regarding spa & wellness. Thank you to the team.,0.0,Neutral
+531,2024-01-03,Housekeeping,4,Concierge went above and beyond to help us regarding housekeeping.,0.0,Neutral
+127,2024-01-06,Front Desk,3,"Stay was fine, nothing particularly memorable regarding front desk. Thank you to the team.",1.0,Positive
+178,2024-01-07,Spa & Wellness,4,Breakfast selection was excellent and fresh regarding spa & wellness. Overall a decent trip.,1.0,Positive
+399,2024-01-07,Spa & Wellness,5,Breakfast selection was excellent and fresh regarding spa & wellness. Overall a decent trip.,1.0,Positive
+577,2024-01-07,Housekeeping,3,"Room was okay, standard hotel amenities regarding housekeeping. Will definitely consider staying again.",0.0,Neutral
+94,2024-01-08,F&B / Restaurant,5,Loved the attention to detail in the room regarding f&b / restaurant.,1.0,Positive
+330,2024-01-08,F&B / Restaurant,5,Concierge went above and beyond to help us regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+59,2024-01-08,F&B / Restaurant,4,Room was spotless and beautifully maintained regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+71,2024-01-10,Concierge,1,Room was not properly cleaned upon arrival regarding concierge.,-1.0,Negative
+29,2024-01-10,F&B / Restaurant,3,"Average experience overall, met basic expectations regarding f&b / restaurant.",0.0,Neutral
+56,2024-01-12,F&B / Restaurant,1,Staff seemed inattentive and slow to respond regarding f&b / restaurant.,-1.0,Negative
+250,2024-01-13,Housekeeping,3,"Average experience overall, met basic expectations regarding housekeeping. Overall a decent trip.",0.0,Neutral
+448,2024-01-13,Spa & Wellness,2,Check-in took far too long and felt disorganized regarding spa & wellness. Thank you to the team.,-0.333,Negative
+188,2024-01-13,Concierge,4,"Beautiful property, exceeded our expectations regarding concierge. Overall a decent trip.",1.0,Positive
+258,2024-01-13,Housekeeping,4,"Beautiful property, exceeded our expectations regarding housekeeping.",1.0,Positive
+571,2024-01-14,Concierge,5,"Quick response to our requests, very efficient regarding concierge.",1.0,Positive
+206,2024-01-16,F&B / Restaurant,1,Towels and toiletries were not restocked regarding f&b / restaurant. Would recommend to others.,-0.333,Negative
+368,2024-01-16,Housekeeping,3,"Service was acceptable, no major issues regarding housekeeping.",-1.0,Negative
+539,2024-01-17,Concierge,5,"Beautiful property, exceeded our expectations regarding concierge. Would recommend to others.",1.0,Positive
+25,2024-01-18,F&B / Restaurant,2,Room was not properly cleaned upon arrival regarding f&b / restaurant. Would recommend to others.,0.0,Neutral
+48,2024-01-19,Housekeeping,4,The spa treatment was relaxing and professional regarding housekeeping. Would recommend to others.,1.0,Positive
+553,2024-01-19,Spa & Wellness,1,Noise from the hallway disturbed our sleep regarding spa & wellness. Overall a decent trip.,-1.0,Negative
+63,2024-01-19,Concierge,1,Towels and toiletries were not restocked regarding concierge.,-1.0,Negative
+341,2024-01-20,F&B / Restaurant,2,Long wait times at the restaurant regarding f&b / restaurant. Overall a decent trip.,-1.0,Negative
+20,2024-01-20,Concierge,4,Room was spotless and beautifully maintained regarding concierge. Will definitely consider staying again.,1.0,Positive
+285,2024-01-21,F&B / Restaurant,1,Breakfast was cold and options were limited regarding f&b / restaurant. Overall a decent trip.,-1.0,Negative
+128,2024-01-21,Spa & Wellness,4,"Beautiful property, exceeded our expectations regarding spa & wellness. Will definitely consider staying again.",1.0,Positive
+442,2024-01-21,Concierge,3,"Service was acceptable, no major issues regarding concierge.",-1.0,Negative
+286,2024-01-21,Housekeeping,3,"Room was okay, standard hotel amenities regarding housekeeping. Would recommend to others.",1.0,Positive
+351,2024-01-22,F&B / Restaurant,4,Concierge went above and beyond to help us regarding f&b / restaurant.,0.0,Neutral
+563,2024-01-22,Housekeeping,3,"Room was okay, standard hotel amenities regarding housekeeping. Thank you to the team.",1.0,Positive
+16,2024-01-22,Spa & Wellness,3,"Average experience overall, met basic expectations regarding spa & wellness.",0.0,Neutral
+230,2024-01-23,Housekeeping,1,Long wait times at the restaurant regarding housekeeping. Will definitely consider staying again.,-1.0,Negative
+198,2024-01-24,Housekeeping,5,Room was spotless and beautifully maintained regarding housekeeping. Would recommend to others.,1.0,Positive
+506,2024-01-25,F&B / Restaurant,5,"Quick response to our requests, very efficient regarding f&b / restaurant.",1.0,Positive
+348,2024-01-25,Concierge,3,"Stay was fine, nothing particularly memorable regarding concierge. Would recommend to others.",1.0,Positive
+164,2024-01-26,Housekeeping,4,Check-in was fast and seamless regarding housekeeping.,1.0,Positive
+131,2024-01-26,Spa & Wellness,5,The staff was incredibly friendly and helpful regarding spa & wellness.,1.0,Positive
+207,2024-01-26,Spa & Wellness,4,Breakfast selection was excellent and fresh regarding spa & wellness. Would recommend to others.,1.0,Positive
+204,2024-01-27,F&B / Restaurant,5,Loved the attention to detail in the room regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+138,2024-01-27,Front Desk,4,The spa treatment was relaxing and professional regarding front desk. Will definitely consider staying again.,1.0,Positive
+322,2024-01-28,Front Desk,1,Requested items never arrived at our room regarding front desk. Overall a decent trip.,-1.0,Negative
+31,2024-01-29,Concierge,3,"Service was acceptable, no major issues regarding concierge. Will definitely consider staying again.",-1.0,Negative
+253,2024-01-30,Spa & Wellness,3,"Stay was fine, nothing particularly memorable regarding spa & wellness. Would recommend to others.",1.0,Positive
+129,2024-02-01,Spa & Wellness,5,"Beautiful property, exceeded our expectations regarding spa & wellness. Thank you to the team.",1.0,Positive
+425,2024-02-01,Front Desk,5,The staff was incredibly friendly and helpful regarding front desk.,1.0,Positive
+266,2024-02-01,Concierge,4,Loved the attention to detail in the room regarding concierge. Would recommend to others.,1.0,Positive
+22,2024-02-03,Front Desk,5,Staff greeted us warmly every single day regarding front desk. Will definitely consider staying again.,1.0,Positive
+340,2024-02-04,Front Desk,4,Staff greeted us warmly every single day regarding front desk. Thank you to the team.,1.0,Positive
+68,2024-02-05,Housekeeping,3,"Service was acceptable, no major issues regarding housekeeping. Thank you to the team.",0.0,Neutral
+44,2024-02-05,Concierge,5,"Quick response to our requests, very efficient regarding concierge. Thank you to the team.",1.0,Positive
+10,2024-02-05,Housekeeping,4,Concierge went above and beyond to help us regarding housekeeping.,0.0,Neutral
+333,2024-02-05,Front Desk,3,"Room was okay, standard hotel amenities regarding front desk. Thank you to the team.",1.0,Positive
+335,2024-02-05,Spa & Wellness,1,Air conditioning was not working properly regarding spa & wellness. Will definitely consider staying again.,-1.0,Negative
+83,2024-02-05,Concierge,4,Breakfast selection was excellent and fresh regarding concierge. Thank you to the team.,1.0,Positive
+321,2024-02-07,Concierge,2,Requested items never arrived at our room regarding concierge.,-1.0,Negative
+446,2024-02-08,F&B / Restaurant,3,"Service was acceptable, no major issues regarding f&b / restaurant.",-1.0,Negative
+173,2024-02-08,Spa & Wellness,3,"Location was convenient, hotel was as described regarding spa & wellness. Would recommend to others.",1.0,Positive
+431,2024-02-08,Spa & Wellness,4,"Quick response to our requests, very efficient regarding spa & wellness. Would recommend to others.",1.0,Positive
+557,2024-02-09,Front Desk,4,Concierge went above and beyond to help us regarding front desk. Would recommend to others.,1.0,Positive
+385,2024-02-09,Concierge,3,"Average experience overall, met basic expectations regarding concierge. Thank you to the team.",1.0,Positive
+134,2024-02-09,F&B / Restaurant,3,"Location was convenient, hotel was as described regarding f&b / restaurant. Thank you to the team.",1.0,Positive
+583,2024-02-09,F&B / Restaurant,3,"Location was convenient, hotel was as described regarding f&b / restaurant. Overall a decent trip.",0.0,Neutral
+54,2024-02-11,Spa & Wellness,2,Long wait times at the restaurant regarding spa & wellness. Thank you to the team.,-0.333,Negative
+314,2024-02-11,Concierge,5,"Quick response to our requests, very efficient regarding concierge. Overall a decent trip.",1.0,Positive
+7,2024-02-11,F&B / Restaurant,5,Check-in was fast and seamless regarding f&b / restaurant.,1.0,Positive
+511,2024-02-11,Housekeeping,4,The staff was incredibly friendly and helpful regarding housekeeping. Thank you to the team.,1.0,Positive
+51,2024-02-15,F&B / Restaurant,3,"Average experience overall, met basic expectations regarding f&b / restaurant. Would recommend to others.",1.0,Positive
+350,2024-02-15,Front Desk,1,Billing error took days to resolve regarding front desk. Will definitely consider staying again.,-1.0,Negative
+264,2024-02-16,Front Desk,4,"Beautiful property, exceeded our expectations regarding front desk.",1.0,Positive
+402,2024-02-16,Housekeeping,5,Breakfast selection was excellent and fresh regarding housekeeping. Overall a decent trip.,1.0,Positive
+79,2024-02-17,Housekeeping,5,Room was spotless and beautifully maintained regarding housekeeping. Thank you to the team.,1.0,Positive
+148,2024-02-17,Housekeeping,5,"Quick response to our requests, very efficient regarding housekeeping.",1.0,Positive
+600,2024-02-18,Spa & Wellness,5,The spa treatment was relaxing and professional regarding spa & wellness.,1.0,Positive
+453,2024-02-19,Spa & Wellness,4,"Beautiful property, exceeded our expectations regarding spa & wellness. Overall a decent trip.",1.0,Positive
+165,2024-02-19,Front Desk,4,Check-in was fast and seamless regarding front desk. Overall a decent trip.,1.0,Positive
+244,2024-02-21,F&B / Restaurant,5,Room was spotless and beautifully maintained regarding f&b / restaurant. Will definitely consider staying again.,1.0,Positive
+432,2024-02-21,Spa & Wellness,4,Room was spotless and beautifully maintained regarding spa & wellness.,1.0,Positive
+587,2024-02-21,F&B / Restaurant,3,"Average experience overall, met basic expectations regarding f&b / restaurant. Would recommend to others.",1.0,Positive
+101,2024-02-23,F&B / Restaurant,5,"Beautiful property, exceeded our expectations regarding f&b / restaurant.",1.0,Positive
+92,2024-02-23,Spa & Wellness,3,"Average experience overall, met basic expectations regarding spa & wellness. Will definitely consider staying again.",0.0,Neutral
+24,2024-02-23,Spa & Wellness,3,"Location was convenient, hotel was as described regarding spa & wellness. Would recommend to others.",1.0,Positive
+349,2024-02-26,F&B / Restaurant,1,Towels and toiletries were not restocked regarding f&b / restaurant. Would recommend to others.,-0.333,Negative
+12,2024-02-26,Housekeeping,5,Staff greeted us warmly every single day regarding housekeeping. Thank you to the team.,1.0,Positive
+470,2024-02-27,Spa & Wellness,3,"Location was convenient, hotel was as described regarding spa & wellness. Would recommend to others.",1.0,Positive
+219,2024-02-27,F&B / Restaurant,4,"Beautiful property, exceeded our expectations regarding f&b / restaurant. Thank you to the team.",1.0,Positive
+434,2024-02-28,F&B / Restaurant,3,"Stay was fine, nothing particularly memorable regarding f&b / restaurant.",0.0,Neutral
+352,2024-02-28,Spa & Wellness,1,Noise from the hallway disturbed our sleep regarding spa & wellness. Thank you to the team.,-0.333,Negative
+168,2024-02-29,Concierge,4,Concierge went above and beyond to help us regarding concierge.,0.0,Neutral
+505,2024-02-29,Concierge,5,The spa treatment was relaxing and professional regarding concierge. Thank you to the team.,1.0,Positive
+598,2024-02-29,Housekeeping,5,Loved the attention to detail in the room regarding housekeeping.,1.0,Positive
+167,2024-03-01,Concierge,4,The staff was incredibly friendly and helpful regarding concierge. Would recommend to others.,1.0,Positive
+119,2024-03-01,Housekeeping,3,"Stay was fine, nothing particularly memorable regarding housekeeping. Thank you to the team.",1.0,Positive
+390,2024-03-01,Front Desk,3,"Service was acceptable, no major issues regarding front desk. Overall a decent trip.",-1.0,Negative
+369,2024-03-02,Concierge,4,The staff was incredibly friendly and helpful regarding concierge. Will definitely consider staying again.,1.0,Positive
+193,2024-03-02,Housekeeping,5,The spa treatment was relaxing and professional regarding housekeeping. Will definitely consider staying again.,1.0,Positive
+382,2024-03-03,F&B / Restaurant,5,"Quick response to our requests, very efficient regarding f&b / restaurant.",1.0,Positive
+50,2024-03-04,Front Desk,3,"Location was convenient, hotel was as described regarding front desk. Will definitely consider staying again.",0.0,Neutral
+312,2024-03-05,Concierge,3,"Room was okay, standard hotel amenities regarding concierge.",0.0,Neutral
+376,2024-03-05,F&B / Restaurant,3,"Stay was fine, nothing particularly memorable regarding f&b / restaurant.",0.0,Neutral
+317,2024-03-05,F&B / Restaurant,5,"Quick response to our requests, very efficient regarding f&b / restaurant. Thank you to the team.",1.0,Positive
+588,2024-03-05,Concierge,5,"Quick response to our requests, very efficient regarding concierge. Would recommend to others.",1.0,Positive
+211,2024-03-07,Front Desk,3,"Service was acceptable, no major issues regarding front desk. Will definitely consider staying again.",-1.0,Negative
+82,2024-03-07,F&B / Restaurant,4,Staff greeted us warmly every single day regarding f&b / restaurant.,1.0,Positive
+169,2024-03-08,Front Desk,5,The spa treatment was relaxing and professional regarding front desk. Thank you to the team.,1.0,Positive
+497,2024-03-09,Front Desk,2,Staff seemed inattentive and slow to respond regarding front desk.,-1.0,Negative
+530,2024-03-09,Spa & Wellness,5,The staff was incredibly friendly and helpful regarding spa & wellness. Would recommend to others.,1.0,Positive
+100,2024-03-10,Concierge,3,"Room was okay, standard hotel amenities regarding concierge.",0.0,Neutral
+520,2024-03-11,Front Desk,1,Towels and toiletries were not restocked regarding front desk.,-1.0,Negative
+38,2024-03-11,F&B / Restaurant,3,"Average experience overall, met basic expectations regarding f&b / restaurant. Would recommend to others.",1.0,Positive
+189,2024-03-12,F&B / Restaurant,1,Noise from the hallway disturbed our sleep regarding f&b / restaurant. Overall a decent trip.,-1.0,Negative
+160,2024-03-12,Concierge,3,"Service was acceptable, no major issues regarding concierge. Thank you to the team.",0.0,Neutral
+529,2024-03-12,Housekeeping,1,Room was not properly cleaned upon arrival regarding housekeeping. Will definitely consider staying again.,-1.0,Negative
+458,2024-03-14,Housekeeping,5,Staff greeted us warmly every single day regarding housekeeping. Would recommend to others.,1.0,Positive
+275,2024-03-14,F&B / Restaurant,5,The spa treatment was relaxing and professional regarding f&b / restaurant. Will definitely consider staying again.,1.0,Positive
+41,2024-03-15,Front Desk,1,Staff seemed inattentive and slow to respond regarding front desk. Would recommend to others.,-0.333,Negative
+21,2024-03-19,F&B / Restaurant,5,Concierge went above and beyond to help us regarding f&b / restaurant.,0.0,Neutral
+76,2024-03-19,Housekeeping,4,Staff greeted us warmly every single day regarding housekeeping. Overall a decent trip.,1.0,Positive
+469,2024-03-19,F&B / Restaurant,2,Towels and toiletries were not restocked regarding f&b / restaurant. Would recommend to others.,-0.333,Negative
+132,2024-03-22,F&B / Restaurant,4,The spa treatment was relaxing and professional regarding f&b / restaurant. Overall a decent trip.,1.0,Positive
+565,2024-03-22,Front Desk,2,Air conditioning was not working properly regarding front desk. Thank you to the team.,0.0,Neutral
+393,2024-03-23,Housekeeping,5,The staff was incredibly friendly and helpful regarding housekeeping. Thank you to the team.,1.0,Positive
+105,2024-03-24,Concierge,5,The staff was incredibly friendly and helpful regarding concierge. Will definitely consider staying again.,1.0,Positive
+268,2024-03-25,Spa & Wellness,4,Staff greeted us warmly every single day regarding spa & wellness.,1.0,Positive
+112,2024-03-25,Front Desk,1,Towels and toiletries were not restocked regarding front desk.,-1.0,Negative
+581,2024-03-25,F&B / Restaurant,4,Breakfast selection was excellent and fresh regarding f&b / restaurant. Will definitely consider staying again.,1.0,Positive
+85,2024-03-25,Concierge,4,Staff greeted us warmly every single day regarding concierge. Thank you to the team.,1.0,Positive
+416,2024-03-26,Front Desk,5,Room was spotless and beautifully maintained regarding front desk. Will definitely consider staying again.,1.0,Positive
+413,2024-03-26,F&B / Restaurant,3,"Room was okay, standard hotel amenities regarding f&b / restaurant.",0.0,Neutral
+440,2024-03-26,Spa & Wellness,4,Concierge went above and beyond to help us regarding spa & wellness. Will definitely consider staying again.,0.0,Neutral
+61,2024-03-27,Concierge,3,"Average experience overall, met basic expectations regarding concierge. Overall a decent trip.",0.0,Neutral
+62,2024-03-27,Front Desk,3,"Average experience overall, met basic expectations regarding front desk.",0.0,Neutral
+273,2024-03-30,Front Desk,2,Breakfast was cold and options were limited regarding front desk.,-1.0,Negative
+155,2024-03-31,F&B / Restaurant,5,Room was spotless and beautifully maintained regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+216,2024-04-01,Concierge,1,Billing error took days to resolve regarding concierge.,-1.0,Negative
+467,2024-04-02,Housekeeping,3,"Service was acceptable, no major issues regarding housekeeping. Thank you to the team.",0.0,Neutral
+251,2024-04-02,Spa & Wellness,3,"Room was okay, standard hotel amenities regarding spa & wellness.",0.0,Neutral
+104,2024-04-02,Spa & Wellness,2,Check-in took far too long and felt disorganized regarding spa & wellness. Would recommend to others.,-0.333,Negative
+437,2024-04-03,F&B / Restaurant,3,"Stay was fine, nothing particularly memorable regarding f&b / restaurant. Thank you to the team.",1.0,Positive
+358,2024-04-03,Concierge,1,Long wait times at the restaurant regarding concierge.,-1.0,Negative
+483,2024-04-03,Spa & Wellness,4,Staff greeted us warmly every single day regarding spa & wellness. Thank you to the team.,1.0,Positive
+550,2024-04-03,Spa & Wellness,5,Loved the attention to detail in the room regarding spa & wellness. Will definitely consider staying again.,1.0,Positive
+400,2024-04-07,Front Desk,4,Concierge went above and beyond to help us regarding front desk.,0.0,Neutral
+147,2024-04-07,Concierge,1,Long wait times at the restaurant regarding concierge. Will definitely consider staying again.,-1.0,Negative
+503,2024-04-07,Concierge,4,"Beautiful property, exceeded our expectations regarding concierge. Overall a decent trip.",1.0,Positive
+108,2024-04-07,Concierge,3,"Stay was fine, nothing particularly memorable regarding concierge.",0.0,Neutral
+492,2024-04-09,Spa & Wellness,5,Check-in was fast and seamless regarding spa & wellness. Overall a decent trip.,1.0,Positive
+181,2024-04-09,F&B / Restaurant,4,The staff was incredibly friendly and helpful regarding f&b / restaurant. Overall a decent trip.,1.0,Positive
+540,2024-04-10,Front Desk,3,"Location was convenient, hotel was as described regarding front desk. Thank you to the team.",1.0,Positive
+404,2024-04-10,F&B / Restaurant,5,Check-in was fast and seamless regarding f&b / restaurant. Would recommend to others.,1.0,Positive
+471,2024-04-11,Housekeeping,4,Concierge went above and beyond to help us regarding housekeeping. Thank you to the team.,1.0,Positive
+182,2024-04-11,Housekeeping,4,Loved the attention to detail in the room regarding housekeeping.,1.0,Positive
+227,2024-04-12,Housekeeping,3,"Average experience overall, met basic expectations regarding housekeeping. Thank you to the team.",1.0,Positive
+86,2024-04-12,F&B / Restaurant,3,"Location was convenient, hotel was as described regarding f&b / restaurant. Would recommend to others.",1.0,Positive
+121,2024-04-12,Concierge,5,"Beautiful property, exceeded our expectations regarding concierge. Would recommend to others.",1.0,Positive
+512,2024-04-12,F&B / Restaurant,4,Check-in was fast and seamless regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+257,2024-04-14,F&B / Restaurant,3,"Average experience overall, met basic expectations regarding f&b / restaurant. Thank you to the team.",1.0,Positive
+585,2024-04-14,Spa & Wellness,3,"Room was okay, standard hotel amenities regarding spa & wellness.",0.0,Neutral
+290,2024-04-16,F&B / Restaurant,5,Staff greeted us warmly every single day regarding f&b / restaurant.,1.0,Positive
+502,2024-04-16,Concierge,5,"Quick response to our requests, very efficient regarding concierge. Would recommend to others.",1.0,Positive
+327,2024-04-18,F&B / Restaurant,2,Room was not properly cleaned upon arrival regarding f&b / restaurant. Thank you to the team.,0.0,Neutral
+47,2024-04-19,Spa & Wellness,3,"Location was convenient, hotel was as described regarding spa & wellness.",0.0,Neutral
+428,2024-04-20,Spa & Wellness,4,Room was spotless and beautifully maintained regarding spa & wellness.,1.0,Positive
+366,2024-04-20,Concierge,5,Breakfast selection was excellent and fresh regarding concierge.,1.0,Positive
+328,2024-04-20,Housekeeping,3,"Location was convenient, hotel was as described regarding housekeeping. Would recommend to others.",1.0,Positive
+118,2024-04-20,Spa & Wellness,3,"Service was acceptable, no major issues regarding spa & wellness. Will definitely consider staying again.",-1.0,Negative
+64,2024-04-20,F&B / Restaurant,4,Breakfast selection was excellent and fresh regarding f&b / restaurant.,1.0,Positive
+308,2024-04-20,Front Desk,2,Staff seemed inattentive and slow to respond regarding front desk.,-1.0,Negative
+58,2024-04-21,Front Desk,3,"Average experience overall, met basic expectations regarding front desk.",0.0,Neutral
+534,2024-04-22,F&B / Restaurant,3,"Room was okay, standard hotel amenities regarding f&b / restaurant. Will definitely consider staying again.",0.0,Neutral
+270,2024-04-22,Spa & Wellness,5,Loved the attention to detail in the room regarding spa & wellness.,1.0,Positive
+222,2024-04-23,Spa & Wellness,4,Concierge went above and beyond to help us regarding spa & wellness. Thank you to the team.,1.0,Positive
+305,2024-04-23,Concierge,3,"Average experience overall, met basic expectations regarding concierge. Will definitely consider staying again.",0.0,Neutral
+306,2024-04-23,Spa & Wellness,5,"Quick response to our requests, very efficient regarding spa & wellness. Thank you to the team.",1.0,Positive
+284,2024-04-23,Front Desk,3,"Location was convenient, hotel was as described regarding front desk. Would recommend to others.",1.0,Positive
+537,2024-04-23,F&B / Restaurant,4,Staff greeted us warmly every single day regarding f&b / restaurant.,1.0,Positive
+46,2024-04-23,Spa & Wellness,2,Staff seemed inattentive and slow to respond regarding spa & wellness. Thank you to the team.,-0.333,Negative
+102,2024-04-24,Front Desk,4,Room was spotless and beautifully maintained regarding front desk.,1.0,Positive
+70,2024-04-25,Spa & Wellness,5,"Quick response to our requests, very efficient regarding spa & wellness.",1.0,Positive
+590,2024-04-25,Housekeeping,3,"Location was convenient, hotel was as described regarding housekeeping. Thank you to the team.",1.0,Positive
+187,2024-04-25,Housekeeping,3,"Room was okay, standard hotel amenities regarding housekeeping.",0.0,Neutral
+114,2024-04-25,F&B / Restaurant,2,Air conditioning was not working properly regarding f&b / restaurant.,-1.0,Negative
+174,2024-04-25,Concierge,1,Room was not properly cleaned upon arrival regarding concierge.,-1.0,Negative
+281,2024-04-27,Housekeeping,4,"Beautiful property, exceeded our expectations regarding housekeeping. Overall a decent trip.",1.0,Positive
+355,2024-04-27,Concierge,3,"Average experience overall, met basic expectations regarding concierge. Overall a decent trip.",0.0,Neutral
+309,2024-04-27,F&B / Restaurant,4,"Beautiful property, exceeded our expectations regarding f&b / restaurant. Thank you to the team.",1.0,Positive
+573,2024-04-28,F&B / Restaurant,1,Long wait times at the restaurant regarding f&b / restaurant. Overall a decent trip.,-1.0,Negative
+336,2024-04-28,Spa & Wellness,5,Check-in was fast and seamless regarding spa & wellness. Would recommend to others.,1.0,Positive
+120,2024-04-30,Housekeeping,3,"Location was convenient, hotel was as described regarding housekeeping.",0.0,Neutral
+478,2024-05-01,F&B / Restaurant,4,Concierge went above and beyond to help us regarding f&b / restaurant. Will definitely consider staying again.,0.0,Neutral
+180,2024-05-03,Spa & Wellness,3,"Location was convenient, hotel was as described regarding spa & wellness.",0.0,Neutral
+40,2024-05-04,Housekeeping,3,"Location was convenient, hotel was as described regarding housekeeping.",0.0,Neutral
+111,2024-05-04,Front Desk,4,"Quick response to our requests, very efficient regarding front desk. Would recommend to others.",1.0,Positive
+359,2024-05-05,Spa & Wellness,5,The staff was incredibly friendly and helpful regarding spa & wellness.,1.0,Positive
+163,2024-05-05,Concierge,3,"Service was acceptable, no major issues regarding concierge.",-1.0,Negative
+488,2024-05-05,F&B / Restaurant,5,The staff was incredibly friendly and helpful regarding f&b / restaurant. Overall a decent trip.,1.0,Positive
+39,2024-05-06,Front Desk,4,Room was spotless and beautifully maintained regarding front desk. Would recommend to others.,1.0,Positive
+145,2024-05-09,Housekeeping,5,Loved the attention to detail in the room regarding housekeeping.,1.0,Positive
+449,2024-05-10,Front Desk,2,Staff seemed inattentive and slow to respond regarding front desk.,-1.0,Negative
+274,2024-05-10,Concierge,4,"Quick response to our requests, very efficient regarding concierge.",1.0,Positive
+595,2024-05-11,Spa & Wellness,4,Breakfast selection was excellent and fresh regarding spa & wellness. Overall a decent trip.,1.0,Positive
+536,2024-05-11,Front Desk,2,Noise from the hallway disturbed our sleep regarding front desk.,-1.0,Negative
+379,2024-05-13,Spa & Wellness,5,Loved the attention to detail in the room regarding spa & wellness. Will definitely consider staying again.,1.0,Positive
+542,2024-05-13,Housekeeping,4,Check-in was fast and seamless regarding housekeeping.,1.0,Positive
+365,2024-05-13,Housekeeping,1,Air conditioning was not working properly regarding housekeeping.,-1.0,Negative
+392,2024-05-13,Front Desk,3,"Room was okay, standard hotel amenities regarding front desk. Will definitely consider staying again.",0.0,Neutral
+493,2024-05-13,F&B / Restaurant,5,Room was spotless and beautifully maintained regarding f&b / restaurant. Would recommend to others.,1.0,Positive
+303,2024-05-14,Front Desk,5,Concierge went above and beyond to help us regarding front desk.,0.0,Neutral
+362,2024-05-14,Concierge,4,"Quick response to our requests, very efficient regarding concierge.",1.0,Positive
+161,2024-05-18,Front Desk,5,Room was spotless and beautifully maintained regarding front desk. Thank you to the team.,1.0,Positive
+395,2024-05-18,Housekeeping,3,"Average experience overall, met basic expectations regarding housekeeping. Will definitely consider staying again.",0.0,Neutral
+293,2024-05-18,Front Desk,1,Billing error took days to resolve regarding front desk. Overall a decent trip.,-1.0,Negative
+476,2024-05-18,F&B / Restaurant,5,Staff greeted us warmly every single day regarding f&b / restaurant. Would recommend to others.,1.0,Positive
+17,2024-05-19,Spa & Wellness,4,Breakfast selection was excellent and fresh regarding spa & wellness. Would recommend to others.,1.0,Positive
+490,2024-05-21,Housekeeping,3,"Average experience overall, met basic expectations regarding housekeeping. Thank you to the team.",1.0,Positive
+342,2024-05-22,Front Desk,5,Concierge went above and beyond to help us regarding front desk. Overall a decent trip.,0.0,Neutral
+535,2024-05-24,F&B / Restaurant,4,Breakfast selection was excellent and fresh regarding f&b / restaurant.,1.0,Positive
+90,2024-05-24,Concierge,2,Check-in took far too long and felt disorganized regarding concierge. Thank you to the team.,-0.333,Negative
+137,2024-05-24,F&B / Restaurant,3,"Room was okay, standard hotel amenities regarding f&b / restaurant. Would recommend to others.",1.0,Positive
+354,2024-05-25,Front Desk,4,Breakfast selection was excellent and fresh regarding front desk.,1.0,Positive
+278,2024-05-26,F&B / Restaurant,4,Loved the attention to detail in the room regarding f&b / restaurant. Would recommend to others.,1.0,Positive
+524,2024-05-26,Housekeeping,5,Staff greeted us warmly every single day regarding housekeeping. Would recommend to others.,1.0,Positive
+213,2024-05-27,Front Desk,4,"Quick response to our requests, very efficient regarding front desk. Thank you to the team.",1.0,Positive
+229,2024-05-28,Housekeeping,5,Concierge went above and beyond to help us regarding housekeeping. Thank you to the team.,1.0,Positive
+494,2024-05-29,F&B / Restaurant,4,The spa treatment was relaxing and professional regarding f&b / restaurant. Overall a decent trip.,1.0,Positive
+214,2024-05-29,F&B / Restaurant,5,Check-in was fast and seamless regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+343,2024-05-29,F&B / Restaurant,1,Noise from the hallway disturbed our sleep regarding f&b / restaurant. Will definitely consider staying again.,-1.0,Negative
+517,2024-05-29,F&B / Restaurant,5,Check-in was fast and seamless regarding f&b / restaurant.,1.0,Positive
+243,2024-05-30,Housekeeping,3,"Stay was fine, nothing particularly memorable regarding housekeeping. Will definitely consider staying again.",0.0,Neutral
+377,2024-05-30,F&B / Restaurant,5,Concierge went above and beyond to help us regarding f&b / restaurant. Overall a decent trip.,0.0,Neutral
+239,2024-05-30,Concierge,4,"Beautiful property, exceeded our expectations regarding concierge. Thank you to the team.",1.0,Positive
+124,2024-05-31,Spa & Wellness,1,Staff seemed inattentive and slow to respond regarding spa & wellness. Will definitely consider staying again.,-1.0,Negative
+283,2024-05-31,Concierge,5,Loved the attention to detail in the room regarding concierge. Will definitely consider staying again.,1.0,Positive
+30,2024-06-01,Spa & Wellness,4,Breakfast selection was excellent and fresh regarding spa & wellness.,1.0,Positive
+232,2024-06-02,Housekeeping,1,Billing error took days to resolve regarding housekeeping. Thank you to the team.,0.0,Neutral
+179,2024-06-03,Housekeeping,3,"Service was acceptable, no major issues regarding housekeeping. Overall a decent trip.",-1.0,Negative
+302,2024-06-03,Front Desk,4,"Quick response to our requests, very efficient regarding front desk. Overall a decent trip.",1.0,Positive
+159,2024-06-03,Housekeeping,5,Breakfast selection was excellent and fresh regarding housekeeping.,1.0,Positive
+263,2024-06-03,Front Desk,4,Staff greeted us warmly every single day regarding front desk.,1.0,Positive
+422,2024-06-03,Front Desk,5,The spa treatment was relaxing and professional regarding front desk. Will definitely consider staying again.,1.0,Positive
+294,2024-06-03,Concierge,4,Breakfast selection was excellent and fresh regarding concierge. Overall a decent trip.,1.0,Positive
+43,2024-06-05,Spa & Wellness,3,"Service was acceptable, no major issues regarding spa & wellness. Thank you to the team.",0.0,Neutral
+406,2024-06-07,Spa & Wellness,4,Check-in was fast and seamless regarding spa & wellness. Overall a decent trip.,1.0,Positive
+441,2024-06-08,Housekeeping,4,Room was spotless and beautifully maintained regarding housekeeping. Overall a decent trip.,1.0,Positive
+210,2024-06-09,Spa & Wellness,2,Noise from the hallway disturbed our sleep regarding spa & wellness.,-1.0,Negative
+220,2024-06-09,F&B / Restaurant,4,Loved the attention to detail in the room regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+231,2024-06-09,Spa & Wellness,5,Concierge went above and beyond to help us regarding spa & wellness.,0.0,Neutral
+496,2024-06-10,Spa & Wellness,4,Check-in was fast and seamless regarding spa & wellness. Thank you to the team.,1.0,Positive
+443,2024-06-10,Spa & Wellness,5,"Beautiful property, exceeded our expectations regarding spa & wellness. Will definitely consider staying again.",1.0,Positive
+113,2024-06-10,Spa & Wellness,5,"Beautiful property, exceeded our expectations regarding spa & wellness. Thank you to the team.",1.0,Positive
+383,2024-06-11,Concierge,5,Room was spotless and beautifully maintained regarding concierge. Overall a decent trip.,1.0,Positive
+196,2024-06-12,Housekeeping,4,The staff was incredibly friendly and helpful regarding housekeeping.,1.0,Positive
+88,2024-06-13,F&B / Restaurant,5,Room was spotless and beautifully maintained regarding f&b / restaurant.,1.0,Positive
+103,2024-06-15,Housekeeping,3,"Average experience overall, met basic expectations regarding housekeeping. Would recommend to others.",1.0,Positive
+509,2024-06-15,F&B / Restaurant,4,Breakfast selection was excellent and fresh regarding f&b / restaurant. Will definitely consider staying again.,1.0,Positive
+125,2024-06-15,Front Desk,1,Billing error took days to resolve regarding front desk. Thank you to the team.,0.0,Neutral
+151,2024-06-16,Concierge,5,"Quick response to our requests, very efficient regarding concierge. Thank you to the team.",1.0,Positive
+73,2024-06-16,Concierge,5,Room was spotless and beautifully maintained regarding concierge. Would recommend to others.,1.0,Positive
+436,2024-06-17,Front Desk,4,The spa treatment was relaxing and professional regarding front desk. Overall a decent trip.,1.0,Positive
+419,2024-06-17,Concierge,3,"Stay was fine, nothing particularly memorable regarding concierge. Thank you to the team.",1.0,Positive
+468,2024-06-18,Front Desk,5,Staff greeted us warmly every single day regarding front desk. Will definitely consider staying again.,1.0,Positive
+568,2024-06-18,Concierge,4,Room was spotless and beautifully maintained regarding concierge. Thank you to the team.,1.0,Positive
+414,2024-06-18,Housekeeping,3,"Service was acceptable, no major issues regarding housekeeping. Would recommend to others.",0.0,Neutral
+8,2024-06-19,Front Desk,5,Room was spotless and beautifully maintained regarding front desk. Overall a decent trip.,1.0,Positive
+150,2024-06-19,Front Desk,5,Room was spotless and beautifully maintained regarding front desk. Would recommend to others.,1.0,Positive
+456,2024-06-19,F&B / Restaurant,5,"Quick response to our requests, very efficient regarding f&b / restaurant.",1.0,Positive
+226,2024-06-19,Front Desk,5,"Beautiful property, exceeded our expectations regarding front desk.",1.0,Positive
+218,2024-06-20,Front Desk,4,Staff greeted us warmly every single day regarding front desk. Would recommend to others.,1.0,Positive
+3,2024-06-20,F&B / Restaurant,3,"Location was convenient, hotel was as described regarding f&b / restaurant.",0.0,Neutral
+547,2024-06-20,Housekeeping,1,Requested items never arrived at our room regarding housekeeping. Thank you to the team.,0.0,Neutral
+559,2024-06-20,Housekeeping,5,Room was spotless and beautifully maintained regarding housekeeping. Thank you to the team.,1.0,Positive
+170,2024-06-21,F&B / Restaurant,4,Staff greeted us warmly every single day regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+560,2024-06-21,Spa & Wellness,5,Loved the attention to detail in the room regarding spa & wellness.,1.0,Positive
+14,2024-06-22,Concierge,3,"Stay was fine, nothing particularly memorable regarding concierge. Thank you to the team.",1.0,Positive
+107,2024-06-26,Front Desk,5,Loved the attention to detail in the room regarding front desk.,1.0,Positive
+570,2024-06-27,Concierge,4,Staff greeted us warmly every single day regarding concierge. Would recommend to others.,1.0,Positive
+556,2024-06-27,Housekeeping,4,Breakfast selection was excellent and fresh regarding housekeeping. Thank you to the team.,1.0,Positive
+195,2024-06-27,F&B / Restaurant,5,The spa treatment was relaxing and professional regarding f&b / restaurant.,1.0,Positive
+240,2024-06-27,Spa & Wellness,2,Air conditioning was not working properly regarding spa & wellness.,-1.0,Negative
+203,2024-06-27,F&B / Restaurant,1,Long wait times at the restaurant regarding f&b / restaurant.,-1.0,Negative
+154,2024-06-28,Front Desk,3,"Room was okay, standard hotel amenities regarding front desk. Thank you to the team.",1.0,Positive
+149,2024-06-29,Front Desk,2,Staff seemed inattentive and slow to respond regarding front desk. Would recommend to others.,-0.333,Negative
+403,2024-06-30,Housekeeping,4,"Quick response to our requests, very efficient regarding housekeeping. Would recommend to others.",1.0,Positive
+479,2024-07-01,Spa & Wellness,3,"Average experience overall, met basic expectations regarding spa & wellness. Thank you to the team.",1.0,Positive
+424,2024-07-02,F&B / Restaurant,5,"Beautiful property, exceeded our expectations regarding f&b / restaurant.",1.0,Positive
+246,2024-07-02,F&B / Restaurant,1,Billing error took days to resolve regarding f&b / restaurant. Overall a decent trip.,-1.0,Negative
+224,2024-07-04,Front Desk,4,Staff greeted us warmly every single day regarding front desk. Overall a decent trip.,1.0,Positive
+200,2024-07-04,Concierge,5,The staff was incredibly friendly and helpful regarding concierge. Overall a decent trip.,1.0,Positive
+427,2024-07-04,Spa & Wellness,4,Loved the attention to detail in the room regarding spa & wellness. Will definitely consider staying again.,1.0,Positive
+455,2024-07-05,F&B / Restaurant,3,"Average experience overall, met basic expectations regarding f&b / restaurant. Thank you to the team.",1.0,Positive
+347,2024-07-05,Housekeeping,2,Room was not properly cleaned upon arrival regarding housekeeping. Overall a decent trip.,-1.0,Negative
+153,2024-07-05,Housekeeping,3,"Location was convenient, hotel was as described regarding housekeeping. Thank you to the team.",1.0,Positive
+480,2024-07-06,Spa & Wellness,3,"Stay was fine, nothing particularly memorable regarding spa & wellness. Thank you to the team.",1.0,Positive
+9,2024-07-07,Concierge,3,"Location was convenient, hotel was as described regarding concierge. Will definitely consider staying again.",0.0,Neutral
+318,2024-07-07,Concierge,3,"Service was acceptable, no major issues regarding concierge.",-1.0,Negative
+500,2024-07-07,Spa & Wellness,4,Staff greeted us warmly every single day regarding spa & wellness. Would recommend to others.,1.0,Positive
+298,2024-07-09,Housekeeping,3,"Location was convenient, hotel was as described regarding housekeeping. Will definitely consider staying again.",0.0,Neutral
+387,2024-07-10,Housekeeping,5,Check-in was fast and seamless regarding housekeeping. Would recommend to others.,1.0,Positive
+75,2024-07-11,Front Desk,3,"Service was acceptable, no major issues regarding front desk. Thank you to the team.",0.0,Neutral
+564,2024-07-12,Spa & Wellness,2,Requested items never arrived at our room regarding spa & wellness.,-1.0,Negative
+311,2024-07-12,Front Desk,5,Breakfast selection was excellent and fresh regarding front desk. Thank you to the team.,1.0,Positive
+551,2024-07-13,Concierge,5,Check-in was fast and seamless regarding concierge.,1.0,Positive
+152,2024-07-13,Concierge,4,Breakfast selection was excellent and fresh regarding concierge. Would recommend to others.,1.0,Positive
+33,2024-07-13,Housekeeping,5,Staff greeted us warmly every single day regarding housekeeping.,1.0,Positive
+444,2024-07-14,Front Desk,5,Check-in was fast and seamless regarding front desk.,1.0,Positive
+522,2024-07-17,Front Desk,4,The staff was incredibly friendly and helpful regarding front desk. Would recommend to others.,1.0,Positive
+552,2024-07-18,Front Desk,1,Room was not properly cleaned upon arrival regarding front desk.,-1.0,Negative
+223,2024-07-19,Concierge,5,The spa treatment was relaxing and professional regarding concierge. Will definitely consider staying again.,1.0,Positive
+267,2024-07-19,Spa & Wellness,3,"Service was acceptable, no major issues regarding spa & wellness.",-1.0,Negative
+373,2024-07-19,Concierge,4,Loved the attention to detail in the room regarding concierge. Will definitely consider staying again.,1.0,Positive
+28,2024-07-19,Front Desk,2,Noise from the hallway disturbed our sleep regarding front desk. Will definitely consider staying again.,-1.0,Negative
+487,2024-07-20,F&B / Restaurant,4,The staff was incredibly friendly and helpful regarding f&b / restaurant.,1.0,Positive
+544,2024-07-20,Concierge,1,Check-in took far too long and felt disorganized regarding concierge. Will definitely consider staying again.,-1.0,Negative
+566,2024-07-22,Spa & Wellness,4,Concierge went above and beyond to help us regarding spa & wellness. Overall a decent trip.,0.0,Neutral
+501,2024-07-23,Concierge,4,The spa treatment was relaxing and professional regarding concierge. Thank you to the team.,1.0,Positive
+574,2024-07-23,Spa & Wellness,3,"Room was okay, standard hotel amenities regarding spa & wellness. Will definitely consider staying again.",0.0,Neutral
+299,2024-07-23,Spa & Wellness,4,Check-in was fast and seamless regarding spa & wellness.,1.0,Positive
+142,2024-07-23,Housekeeping,1,Staff seemed inattentive and slow to respond regarding housekeeping. Overall a decent trip.,-1.0,Negative
+474,2024-07-23,Front Desk,3,"Location was convenient, hotel was as described regarding front desk. Will definitely consider staying again.",0.0,Neutral
+245,2024-07-25,Front Desk,3,"Stay was fine, nothing particularly memorable regarding front desk.",0.0,Neutral
+593,2024-07-25,F&B / Restaurant,1,Requested items never arrived at our room regarding f&b / restaurant. Thank you to the team.,0.0,Neutral
+26,2024-07-27,Front Desk,2,Towels and toiletries were not restocked regarding front desk. Overall a decent trip.,-1.0,Negative
+67,2024-07-28,Spa & Wellness,2,Requested items never arrived at our room regarding spa & wellness. Would recommend to others.,0.0,Neutral
+99,2024-07-29,Concierge,5,Room was spotless and beautifully maintained regarding concierge. Would recommend to others.,1.0,Positive
+538,2024-07-30,Housekeeping,1,Room was not properly cleaned upon arrival regarding housekeeping. Will definitely consider staying again.,-1.0,Negative
+212,2024-07-30,Front Desk,3,"Location was convenient, hotel was as described regarding front desk. Thank you to the team.",1.0,Positive
+491,2024-07-30,Spa & Wellness,5,The staff was incredibly friendly and helpful regarding spa & wellness.,1.0,Positive
+569,2024-08-01,F&B / Restaurant,4,The spa treatment was relaxing and professional regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+143,2024-08-01,Concierge,3,"Service was acceptable, no major issues regarding concierge. Would recommend to others.",0.0,Neutral
+430,2024-08-02,Housekeeping,2,Room was not properly cleaned upon arrival regarding housekeeping. Thank you to the team.,0.0,Neutral
+466,2024-08-02,Front Desk,4,Concierge went above and beyond to help us regarding front desk. Overall a decent trip.,0.0,Neutral
+507,2024-08-02,Concierge,4,Check-in was fast and seamless regarding concierge.,1.0,Positive
+389,2024-08-03,Housekeeping,5,Staff greeted us warmly every single day regarding housekeeping.,1.0,Positive
+18,2024-08-03,Concierge,4,Loved the attention to detail in the room regarding concierge.,1.0,Positive
+252,2024-08-03,Spa & Wellness,3,"Average experience overall, met basic expectations regarding spa & wellness. Thank you to the team.",1.0,Positive
+533,2024-08-04,Concierge,2,Room was not properly cleaned upon arrival regarding concierge.,-1.0,Negative
+32,2024-08-04,F&B / Restaurant,1,Billing error took days to resolve regarding f&b / restaurant. Will definitely consider staying again.,-1.0,Negative
+310,2024-08-04,Housekeeping,5,Loved the attention to detail in the room regarding housekeeping. Will definitely consider staying again.,1.0,Positive
+472,2024-08-04,Housekeeping,4,The staff was incredibly friendly and helpful regarding housekeeping. Will definitely consider staying again.,1.0,Positive
+91,2024-08-04,Housekeeping,5,Staff greeted us warmly every single day regarding housekeeping.,1.0,Positive
+202,2024-08-05,F&B / Restaurant,2,Breakfast was cold and options were limited regarding f&b / restaurant.,-1.0,Negative
+77,2024-08-05,Spa & Wellness,4,Check-in was fast and seamless regarding spa & wellness.,1.0,Positive
+49,2024-08-05,F&B / Restaurant,2,Staff seemed inattentive and slow to respond regarding f&b / restaurant. Thank you to the team.,-0.333,Negative
+596,2024-08-05,Spa & Wellness,3,"Stay was fine, nothing particularly memorable regarding spa & wellness. Thank you to the team.",1.0,Positive
+292,2024-08-05,Housekeeping,3,"Average experience overall, met basic expectations regarding housekeeping.",0.0,Neutral
+367,2024-08-06,Front Desk,4,The spa treatment was relaxing and professional regarding front desk.,1.0,Positive
+324,2024-08-08,Front Desk,5,Staff greeted us warmly every single day regarding front desk. Would recommend to others.,1.0,Positive
+255,2024-08-09,Housekeeping,1,Noise from the hallway disturbed our sleep regarding housekeeping. Would recommend to others.,-0.333,Negative
+549,2024-08-09,Spa & Wellness,4,The staff was incredibly friendly and helpful regarding spa & wellness. Overall a decent trip.,1.0,Positive
+439,2024-08-10,F&B / Restaurant,3,"Stay was fine, nothing particularly memorable regarding f&b / restaurant.",0.0,Neutral
+558,2024-08-12,F&B / Restaurant,5,The spa treatment was relaxing and professional regarding f&b / restaurant.,1.0,Positive
+589,2024-08-13,Front Desk,1,Staff seemed inattentive and slow to respond regarding front desk. Overall a decent trip.,-1.0,Negative
+398,2024-08-13,Housekeeping,3,"Average experience overall, met basic expectations regarding housekeeping. Will definitely consider staying again.",0.0,Neutral
+475,2024-08-14,F&B / Restaurant,2,Staff seemed inattentive and slow to respond regarding f&b / restaurant. Thank you to the team.,-0.333,Negative
+238,2024-08-14,F&B / Restaurant,3,"Location was convenient, hotel was as described regarding f&b / restaurant. Thank you to the team.",1.0,Positive
+162,2024-08-15,F&B / Restaurant,2,Staff seemed inattentive and slow to respond regarding f&b / restaurant. Overall a decent trip.,-1.0,Negative
+135,2024-08-15,F&B / Restaurant,2,Room was not properly cleaned upon arrival regarding f&b / restaurant. Will definitely consider staying again.,-1.0,Negative
+452,2024-08-16,Front Desk,5,Staff greeted us warmly every single day regarding front desk.,1.0,Positive
+461,2024-08-16,Housekeeping,4,Loved the attention to detail in the room regarding housekeeping.,1.0,Positive
+580,2024-08-17,Concierge,4,"Quick response to our requests, very efficient regarding concierge. Will definitely consider staying again.",1.0,Positive
+594,2024-08-17,F&B / Restaurant,3,"Room was okay, standard hotel amenities regarding f&b / restaurant. Will definitely consider staying again.",0.0,Neutral
+157,2024-08-18,Housekeeping,5,Room was spotless and beautifully maintained regarding housekeeping. Overall a decent trip.,1.0,Positive
+72,2024-08-19,F&B / Restaurant,5,Staff greeted us warmly every single day regarding f&b / restaurant.,1.0,Positive
+450,2024-08-19,F&B / Restaurant,5,"Quick response to our requests, very efficient regarding f&b / restaurant. Will definitely consider staying again.",1.0,Positive
+291,2024-08-20,F&B / Restaurant,5,"Quick response to our requests, very efficient regarding f&b / restaurant. Thank you to the team.",1.0,Positive
+192,2024-08-20,Concierge,5,The spa treatment was relaxing and professional regarding concierge. Thank you to the team.,1.0,Positive
+401,2024-08-20,Front Desk,3,"Service was acceptable, no major issues regarding front desk.",-1.0,Negative
+144,2024-08-20,Housekeeping,4,Concierge went above and beyond to help us regarding housekeeping. Will definitely consider staying again.,0.0,Neutral
+89,2024-08-20,Spa & Wellness,3,"Room was okay, standard hotel amenities regarding spa & wellness.",0.0,Neutral
+52,2024-08-20,Concierge,4,Check-in was fast and seamless regarding concierge. Overall a decent trip.,1.0,Positive
+459,2024-08-21,F&B / Restaurant,4,Concierge went above and beyond to help us regarding f&b / restaurant. Will definitely consider staying again.,0.0,Neutral
+378,2024-08-22,Concierge,3,"Service was acceptable, no major issues regarding concierge. Will definitely consider staying again.",-1.0,Negative
+269,2024-08-22,F&B / Restaurant,2,Air conditioning was not working properly regarding f&b / restaurant. Thank you to the team.,0.0,Neutral
+136,2024-08-22,Front Desk,3,"Location was convenient, hotel was as described regarding front desk. Overall a decent trip.",0.0,Neutral
+60,2024-08-23,F&B / Restaurant,2,Breakfast was cold and options were limited regarding f&b / restaurant.,-1.0,Negative
+208,2024-08-24,F&B / Restaurant,2,Noise from the hallway disturbed our sleep regarding f&b / restaurant. Overall a decent trip.,-1.0,Negative
+396,2024-08-24,Housekeeping,5,Breakfast selection was excellent and fresh regarding housekeeping. Would recommend to others.,1.0,Positive
+504,2024-08-26,F&B / Restaurant,3,"Stay was fine, nothing particularly memorable regarding f&b / restaurant.",0.0,Neutral
+410,2024-08-27,Spa & Wellness,3,"Average experience overall, met basic expectations regarding spa & wellness. Would recommend to others.",1.0,Positive
+572,2024-08-27,Housekeeping,4,Staff greeted us warmly every single day regarding housekeeping. Overall a decent trip.,1.0,Positive
+288,2024-08-28,Housekeeping,5,"Beautiful property, exceeded our expectations regarding housekeeping. Would recommend to others.",1.0,Positive
+279,2024-08-28,Concierge,3,"Service was acceptable, no major issues regarding concierge.",-1.0,Negative
+65,2024-08-30,Spa & Wellness,3,"Average experience overall, met basic expectations regarding spa & wellness. Would recommend to others.",1.0,Positive
+420,2024-09-03,Spa & Wellness,2,Noise from the hallway disturbed our sleep regarding spa & wellness. Would recommend to others.,-0.333,Negative
+513,2024-09-03,Housekeeping,5,"Quick response to our requests, very efficient regarding housekeeping. Overall a decent trip.",1.0,Positive
+19,2024-09-04,F&B / Restaurant,3,"Service was acceptable, no major issues regarding f&b / restaurant. Overall a decent trip.",-1.0,Negative
+445,2024-09-04,Front Desk,5,Breakfast selection was excellent and fresh regarding front desk. Will definitely consider staying again.,1.0,Positive
+423,2024-09-05,F&B / Restaurant,3,"Location was convenient, hotel was as described regarding f&b / restaurant. Will definitely consider staying again.",0.0,Neutral
+98,2024-09-05,Housekeeping,4,"Beautiful property, exceeded our expectations regarding housekeeping. Will definitely consider staying again.",1.0,Positive
+562,2024-09-05,Spa & Wellness,1,Check-in took far too long and felt disorganized regarding spa & wellness. Would recommend to others.,-0.333,Negative
+561,2024-09-08,Concierge,4,Check-in was fast and seamless regarding concierge. Overall a decent trip.,1.0,Positive
+185,2024-09-08,Housekeeping,4,The staff was incredibly friendly and helpful regarding housekeeping. Thank you to the team.,1.0,Positive
+272,2024-09-08,Concierge,4,The spa treatment was relaxing and professional regarding concierge. Overall a decent trip.,1.0,Positive
+325,2024-09-10,Front Desk,1,Long wait times at the restaurant regarding front desk.,-1.0,Negative
+320,2024-09-11,Housekeeping,2,Long wait times at the restaurant regarding housekeeping. Would recommend to others.,-0.333,Negative
+514,2024-09-11,Spa & Wellness,1,Towels and toiletries were not restocked regarding spa & wellness. Thank you to the team.,-0.333,Negative
+412,2024-09-12,Housekeeping,4,"Quick response to our requests, very efficient regarding housekeeping.",1.0,Positive
+435,2024-09-12,Spa & Wellness,1,Check-in took far too long and felt disorganized regarding spa & wellness.,-1.0,Negative
+528,2024-09-13,Front Desk,5,Staff greeted us warmly every single day regarding front desk. Thank you to the team.,1.0,Positive
+499,2024-09-14,Spa & Wellness,3,"Room was okay, standard hotel amenities regarding spa & wellness. Thank you to the team.",1.0,Positive
+217,2024-09-14,Spa & Wellness,2,Room was not properly cleaned upon arrival regarding spa & wellness. Would recommend to others.,0.0,Neutral
+141,2024-09-15,F&B / Restaurant,3,"Location was convenient, hotel was as described regarding f&b / restaurant.",0.0,Neutral
+109,2024-09-15,Housekeeping,5,Loved the attention to detail in the room regarding housekeeping. Thank you to the team.,1.0,Positive
+191,2024-09-15,Housekeeping,3,"Average experience overall, met basic expectations regarding housekeeping. Will definitely consider staying again.",0.0,Neutral
+386,2024-09-16,Spa & Wellness,2,Billing error took days to resolve regarding spa & wellness. Would recommend to others.,0.0,Neutral
+578,2024-09-17,Front Desk,3,"Average experience overall, met basic expectations regarding front desk. Thank you to the team.",1.0,Positive
+27,2024-09-18,Front Desk,4,Breakfast selection was excellent and fresh regarding front desk. Would recommend to others.,1.0,Positive
+508,2024-09-19,Housekeeping,5,Concierge went above and beyond to help us regarding housekeeping. Would recommend to others.,1.0,Positive
+265,2024-09-19,Spa & Wellness,4,Staff greeted us warmly every single day regarding spa & wellness. Would recommend to others.,1.0,Positive
+433,2024-09-20,Concierge,4,Staff greeted us warmly every single day regarding concierge.,1.0,Positive
+11,2024-09-20,Front Desk,3,"Location was convenient, hotel was as described regarding front desk. Would recommend to others.",1.0,Positive
+546,2024-09-21,Spa & Wellness,5,Breakfast selection was excellent and fresh regarding spa & wellness.,1.0,Positive
+426,2024-09-22,Spa & Wellness,2,Air conditioning was not working properly regarding spa & wellness. Thank you to the team.,0.0,Neutral
+391,2024-09-22,Spa & Wellness,5,Concierge went above and beyond to help us regarding spa & wellness. Would recommend to others.,1.0,Positive
+282,2024-09-24,F&B / Restaurant,2,Long wait times at the restaurant regarding f&b / restaurant. Overall a decent trip.,-1.0,Negative
+287,2024-09-24,F&B / Restaurant,5,Check-in was fast and seamless regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+315,2024-09-24,Spa & Wellness,3,"Room was okay, standard hotel amenities regarding spa & wellness. Overall a decent trip.",0.0,Neutral
+484,2024-09-25,F&B / Restaurant,4,Check-in was fast and seamless regarding f&b / restaurant. Will definitely consider staying again.,1.0,Positive
+356,2024-09-25,Front Desk,4,"Beautiful property, exceeded our expectations regarding front desk.",1.0,Positive
+526,2024-09-25,Front Desk,5,Staff greeted us warmly every single day regarding front desk. Will definitely consider staying again.,1.0,Positive
+545,2024-09-26,Housekeeping,2,Billing error took days to resolve regarding housekeeping.,-1.0,Negative
+80,2024-09-27,F&B / Restaurant,4,Room was spotless and beautifully maintained regarding f&b / restaurant. Overall a decent trip.,1.0,Positive
+133,2024-09-28,Front Desk,1,Room was not properly cleaned upon arrival regarding front desk. Overall a decent trip.,-1.0,Negative
+301,2024-09-29,Spa & Wellness,4,Room was spotless and beautifully maintained regarding spa & wellness. Would recommend to others.,1.0,Positive
+242,2024-09-30,Spa & Wellness,1,Breakfast was cold and options were limited regarding spa & wellness. Overall a decent trip.,-1.0,Negative
+518,2024-09-30,Concierge,5,Loved the attention to detail in the room regarding concierge.,1.0,Positive
+329,2024-10-01,Concierge,4,Check-in was fast and seamless regarding concierge.,1.0,Positive
+482,2024-10-02,F&B / Restaurant,2,Long wait times at the restaurant regarding f&b / restaurant. Would recommend to others.,-0.333,Negative
+481,2024-10-02,F&B / Restaurant,3,"Room was okay, standard hotel amenities regarding f&b / restaurant. Will definitely consider staying again.",0.0,Neutral
+209,2024-10-02,Spa & Wellness,3,"Average experience overall, met basic expectations regarding spa & wellness. Thank you to the team.",1.0,Positive
+344,2024-10-03,Housekeeping,2,Billing error took days to resolve regarding housekeeping. Would recommend to others.,0.0,Neutral
+249,2024-10-03,Front Desk,4,"Beautiful property, exceeded our expectations regarding front desk. Thank you to the team.",1.0,Positive
+186,2024-10-03,Spa & Wellness,5,Check-in was fast and seamless regarding spa & wellness. Thank you to the team.,1.0,Positive
+339,2024-10-05,Concierge,5,Breakfast selection was excellent and fresh regarding concierge. Overall a decent trip.,1.0,Positive
+247,2024-10-05,Housekeeping,5,Concierge went above and beyond to help us regarding housekeeping. Would recommend to others.,1.0,Positive
+221,2024-10-06,Spa & Wellness,5,Room was spotless and beautifully maintained regarding spa & wellness. Overall a decent trip.,1.0,Positive
+586,2024-10-07,Front Desk,2,Noise from the hallway disturbed our sleep regarding front desk.,-1.0,Negative
+323,2024-10-08,Concierge,5,Concierge went above and beyond to help us regarding concierge.,0.0,Neutral
+126,2024-10-08,Spa & Wellness,5,The staff was incredibly friendly and helpful regarding spa & wellness. Overall a decent trip.,1.0,Positive
+228,2024-10-09,Housekeeping,5,The staff was incredibly friendly and helpful regarding housekeeping. Thank you to the team.,1.0,Positive
+405,2024-10-09,Housekeeping,1,Air conditioning was not working properly regarding housekeeping. Will definitely consider staying again.,-1.0,Negative
+316,2024-10-09,Concierge,2,Staff seemed inattentive and slow to respond regarding concierge. Overall a decent trip.,-1.0,Negative
+394,2024-10-09,Concierge,1,Check-in took far too long and felt disorganized regarding concierge.,-1.0,Negative
+254,2024-10-10,F&B / Restaurant,4,"Beautiful property, exceeded our expectations regarding f&b / restaurant. Thank you to the team.",1.0,Positive
+146,2024-10-10,Housekeeping,5,Concierge went above and beyond to help us regarding housekeeping. Would recommend to others.,1.0,Positive
+415,2024-10-10,Housekeeping,5,Room was spotless and beautifully maintained regarding housekeeping. Thank you to the team.,1.0,Positive
+543,2024-10-11,Front Desk,4,Staff greeted us warmly every single day regarding front desk. Thank you to the team.,1.0,Positive
+548,2024-10-12,Spa & Wellness,5,"Quick response to our requests, very efficient regarding spa & wellness. Would recommend to others.",1.0,Positive
+248,2024-10-13,Spa & Wellness,5,Breakfast selection was excellent and fresh regarding spa & wellness. Would recommend to others.,1.0,Positive
+582,2024-10-15,F&B / Restaurant,4,Room was spotless and beautifully maintained regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+364,2024-10-16,Housekeeping,5,Loved the attention to detail in the room regarding housekeeping.,1.0,Positive
+409,2024-10-16,Housekeeping,2,Billing error took days to resolve regarding housekeeping. Thank you to the team.,0.0,Neutral
+110,2024-10-16,Spa & Wellness,5,"Beautiful property, exceeded our expectations regarding spa & wellness. Will definitely consider staying again.",1.0,Positive
+176,2024-10-16,Concierge,3,"Service was acceptable, no major issues regarding concierge. Overall a decent trip.",-1.0,Negative
+463,2024-10-17,Spa & Wellness,5,Breakfast selection was excellent and fresh regarding spa & wellness.,1.0,Positive
+489,2024-10-18,Housekeeping,5,Staff greeted us warmly every single day regarding housekeeping.,1.0,Positive
+256,2024-10-19,Front Desk,1,Towels and toiletries were not restocked regarding front desk. Thank you to the team.,-0.333,Negative
+123,2024-10-20,Front Desk,2,Staff seemed inattentive and slow to respond regarding front desk. Will definitely consider staying again.,-1.0,Negative
+122,2024-10-21,Front Desk,1,Breakfast was cold and options were limited regarding front desk. Overall a decent trip.,-1.0,Negative
+417,2024-10-22,Front Desk,2,Long wait times at the restaurant regarding front desk.,-1.0,Negative
+296,2024-10-22,F&B / Restaurant,2,Towels and toiletries were not restocked regarding f&b / restaurant. Overall a decent trip.,-1.0,Negative
+460,2024-10-22,Concierge,5,Room was spotless and beautifully maintained regarding concierge.,1.0,Positive
+35,2024-10-23,Housekeeping,3,"Stay was fine, nothing particularly memorable regarding housekeeping. Thank you to the team.",1.0,Positive
+388,2024-10-23,Housekeeping,4,"Beautiful property, exceeded our expectations regarding housekeeping. Thank you to the team.",1.0,Positive
+271,2024-10-24,Front Desk,5,Breakfast selection was excellent and fresh regarding front desk. Thank you to the team.,1.0,Positive
+69,2024-10-28,F&B / Restaurant,3,"Service was acceptable, no major issues regarding f&b / restaurant.",-1.0,Negative
+462,2024-10-28,F&B / Restaurant,4,"Beautiful property, exceeded our expectations regarding f&b / restaurant.",1.0,Positive
+201,2024-10-28,F&B / Restaurant,5,The staff was incredibly friendly and helpful regarding f&b / restaurant.,1.0,Positive
+97,2024-10-29,Concierge,5,Breakfast selection was excellent and fresh regarding concierge. Thank you to the team.,1.0,Positive
+139,2024-10-29,Spa & Wellness,4,The staff was incredibly friendly and helpful regarding spa & wellness. Will definitely consider staying again.,1.0,Positive
+84,2024-10-29,Spa & Wellness,3,"Service was acceptable, no major issues regarding spa & wellness. Overall a decent trip.",-1.0,Negative
+357,2024-10-30,Front Desk,3,"Stay was fine, nothing particularly memorable regarding front desk. Would recommend to others.",1.0,Positive
+66,2024-10-30,Concierge,3,"Average experience overall, met basic expectations regarding concierge.",0.0,Neutral
+370,2024-10-30,F&B / Restaurant,3,"Location was convenient, hotel was as described regarding f&b / restaurant. Overall a decent trip.",0.0,Neutral
+215,2024-10-30,Spa & Wellness,3,"Stay was fine, nothing particularly memorable regarding spa & wellness.",0.0,Neutral
+116,2024-10-30,F&B / Restaurant,2,Room was not properly cleaned upon arrival regarding f&b / restaurant. Thank you to the team.,0.0,Neutral
+81,2024-10-31,Concierge,5,"Quick response to our requests, very efficient regarding concierge. Would recommend to others.",1.0,Positive
+1,2024-11-01,Concierge,2,Billing error took days to resolve regarding concierge. Overall a decent trip.,-1.0,Negative
+197,2024-11-01,Housekeeping,4,Check-in was fast and seamless regarding housekeeping. Overall a decent trip.,1.0,Positive
+421,2024-11-01,Housekeeping,4,Loved the attention to detail in the room regarding housekeeping. Would recommend to others.,1.0,Positive
+237,2024-11-02,Front Desk,3,"Location was convenient, hotel was as described regarding front desk. Will definitely consider staying again.",0.0,Neutral
+486,2024-11-02,Spa & Wellness,4,The staff was incredibly friendly and helpful regarding spa & wellness. Overall a decent trip.,1.0,Positive
+381,2024-11-02,Front Desk,5,Loved the attention to detail in the room regarding front desk. Would recommend to others.,1.0,Positive
+106,2024-11-04,F&B / Restaurant,5,Room was spotless and beautifully maintained regarding f&b / restaurant.,1.0,Positive
+74,2024-11-04,Concierge,4,Staff greeted us warmly every single day regarding concierge. Overall a decent trip.,1.0,Positive
+259,2024-11-04,Spa & Wellness,4,Loved the attention to detail in the room regarding spa & wellness. Thank you to the team.,1.0,Positive
+465,2024-11-04,Spa & Wellness,2,Long wait times at the restaurant regarding spa & wellness. Will definitely consider staying again.,-1.0,Negative
+93,2024-11-05,Housekeeping,4,Concierge went above and beyond to help us regarding housekeeping.,0.0,Neutral
+117,2024-11-06,Concierge,3,"Service was acceptable, no major issues regarding concierge. Would recommend to others.",0.0,Neutral
+591,2024-11-07,Spa & Wellness,4,Check-in was fast and seamless regarding spa & wellness. Would recommend to others.,1.0,Positive
+307,2024-11-07,Concierge,3,"Location was convenient, hotel was as described regarding concierge.",0.0,Neutral
+183,2024-11-08,F&B / Restaurant,3,"Location was convenient, hotel was as described regarding f&b / restaurant. Will definitely consider staying again.",0.0,Neutral
+331,2024-11-09,Housekeeping,4,The spa treatment was relaxing and professional regarding housekeeping. Thank you to the team.,1.0,Positive
+158,2024-11-10,Front Desk,1,Staff seemed inattentive and slow to respond regarding front desk. Will definitely consider staying again.,-1.0,Negative
+361,2024-11-11,Spa & Wellness,3,"Location was convenient, hotel was as described regarding spa & wellness. Overall a decent trip.",0.0,Neutral
+374,2024-11-13,Spa & Wellness,2,Air conditioning was not working properly regarding spa & wellness. Will definitely consider staying again.,-1.0,Negative
+527,2024-11-13,Concierge,4,"Quick response to our requests, very efficient regarding concierge.",1.0,Positive
+166,2024-11-13,Concierge,4,Room was spotless and beautifully maintained regarding concierge.,1.0,Positive
+454,2024-11-13,Spa & Wellness,3,"Room was okay, standard hotel amenities regarding spa & wellness.",0.0,Neutral
+485,2024-11-14,Front Desk,3,"Room was okay, standard hotel amenities regarding front desk. Thank you to the team.",1.0,Positive
+236,2024-11-14,Concierge,2,Check-in took far too long and felt disorganized regarding concierge. Will definitely consider staying again.,-1.0,Negative
+297,2024-11-14,Front Desk,2,Requested items never arrived at our room regarding front desk. Would recommend to others.,0.0,Neutral
+15,2024-11-14,Front Desk,5,The spa treatment was relaxing and professional regarding front desk. Overall a decent trip.,1.0,Positive
+555,2024-11-15,Front Desk,3,"Average experience overall, met basic expectations regarding front desk. Will definitely consider staying again.",0.0,Neutral
+78,2024-11-16,Front Desk,3,"Service was acceptable, no major issues regarding front desk. Overall a decent trip.",-1.0,Negative
+338,2024-11-16,Concierge,4,The staff was incredibly friendly and helpful regarding concierge. Will definitely consider staying again.,1.0,Positive
+276,2024-11-17,Housekeeping,5,The spa treatment was relaxing and professional regarding housekeeping. Overall a decent trip.,1.0,Positive
+576,2024-11-18,Front Desk,5,Room was spotless and beautifully maintained regarding front desk.,1.0,Positive
+451,2024-11-19,Housekeeping,4,"Quick response to our requests, very efficient regarding housekeeping.",1.0,Positive
+372,2024-11-19,Concierge,4,Room was spotless and beautifully maintained regarding concierge. Overall a decent trip.,1.0,Positive
+447,2024-11-20,Front Desk,4,Room was spotless and beautifully maintained regarding front desk. Thank you to the team.,1.0,Positive
+199,2024-11-21,Spa & Wellness,5,Concierge went above and beyond to help us regarding spa & wellness. Will definitely consider staying again.,0.0,Neutral
+261,2024-11-21,Concierge,5,Concierge went above and beyond to help us regarding concierge. Overall a decent trip.,0.0,Neutral
+156,2024-11-21,Housekeeping,5,Staff greeted us warmly every single day regarding housekeeping. Would recommend to others.,1.0,Positive
+55,2024-11-21,Concierge,2,Towels and toiletries were not restocked regarding concierge. Thank you to the team.,-0.333,Negative
+334,2024-11-21,Housekeeping,3,"Location was convenient, hotel was as described regarding housekeeping. Overall a decent trip.",0.0,Neutral
+532,2024-11-22,Concierge,1,Staff seemed inattentive and slow to respond regarding concierge. Overall a decent trip.,-1.0,Negative
+171,2024-11-23,Concierge,4,Staff greeted us warmly every single day regarding concierge.,1.0,Positive
+177,2024-11-23,Spa & Wellness,3,"Stay was fine, nothing particularly memorable regarding spa & wellness.",0.0,Neutral
+473,2024-11-24,Spa & Wellness,4,Check-in was fast and seamless regarding spa & wellness. Would recommend to others.,1.0,Positive
+42,2024-11-24,Concierge,5,"Beautiful property, exceeded our expectations regarding concierge. Overall a decent trip.",1.0,Positive
+262,2024-11-24,Front Desk,5,Breakfast selection was excellent and fresh regarding front desk.,1.0,Positive
+584,2024-11-24,Concierge,1,Noise from the hallway disturbed our sleep regarding concierge. Overall a decent trip.,-1.0,Negative
+87,2024-11-24,Housekeeping,5,Check-in was fast and seamless regarding housekeeping. Thank you to the team.,1.0,Positive
+313,2024-11-24,F&B / Restaurant,3,"Average experience overall, met basic expectations regarding f&b / restaurant. Will definitely consider staying again.",0.0,Neutral
+371,2024-11-24,Spa & Wellness,4,Loved the attention to detail in the room regarding spa & wellness. Would recommend to others.,1.0,Positive
+523,2024-11-25,Front Desk,4,Breakfast selection was excellent and fresh regarding front desk.,1.0,Positive
+599,2024-11-26,Spa & Wellness,3,"Stay was fine, nothing particularly memorable regarding spa & wellness.",0.0,Neutral
+592,2024-11-27,F&B / Restaurant,4,Room was spotless and beautifully maintained regarding f&b / restaurant. Overall a decent trip.,1.0,Positive
+510,2024-11-27,Front Desk,4,Concierge went above and beyond to help us regarding front desk.,0.0,Neutral
+304,2024-11-27,Housekeeping,5,"Beautiful property, exceeded our expectations regarding housekeeping. Will definitely consider staying again.",1.0,Positive
+190,2024-11-28,Housekeeping,3,"Location was convenient, hotel was as described regarding housekeeping. Overall a decent trip.",0.0,Neutral
+579,2024-11-29,Front Desk,4,Room was spotless and beautifully maintained regarding front desk. Thank you to the team.,1.0,Positive
+554,2024-11-29,Concierge,3,"Location was convenient, hotel was as described regarding concierge. Will definitely consider staying again.",0.0,Neutral
+115,2024-11-30,Housekeeping,4,Loved the attention to detail in the room regarding housekeeping. Overall a decent trip.,1.0,Positive
+360,2024-12-01,Spa & Wellness,5,Breakfast selection was excellent and fresh regarding spa & wellness. Thank you to the team.,1.0,Positive
+575,2024-12-01,Spa & Wellness,1,Room was not properly cleaned upon arrival regarding spa & wellness. Will definitely consider staying again.,-1.0,Negative
+418,2024-12-01,Concierge,3,"Room was okay, standard hotel amenities regarding concierge. Would recommend to others.",1.0,Positive
+95,2024-12-02,Spa & Wellness,4,The staff was incredibly friendly and helpful regarding spa & wellness. Thank you to the team.,1.0,Positive
+300,2024-12-03,Front Desk,5,Room was spotless and beautifully maintained regarding front desk. Thank you to the team.,1.0,Positive
+597,2024-12-04,Front Desk,1,Requested items never arrived at our room regarding front desk. Will definitely consider staying again.,-1.0,Negative
+96,2024-12-04,Housekeeping,5,Breakfast selection was excellent and fresh regarding housekeeping.,1.0,Positive
+498,2024-12-04,Front Desk,4,Concierge went above and beyond to help us regarding front desk. Thank you to the team.,1.0,Positive
+260,2024-12-05,Housekeeping,4,Loved the attention to detail in the room regarding housekeeping.,1.0,Positive
+380,2024-12-05,Front Desk,4,Concierge went above and beyond to help us regarding front desk. Would recommend to others.,1.0,Positive
+337,2024-12-06,Spa & Wellness,3,"Room was okay, standard hotel amenities regarding spa & wellness. Would recommend to others.",1.0,Positive
+525,2024-12-06,Spa & Wellness,5,Check-in was fast and seamless regarding spa & wellness.,1.0,Positive
+130,2024-12-07,Concierge,3,"Room was okay, standard hotel amenities regarding concierge.",0.0,Neutral
+34,2024-12-07,Spa & Wellness,1,Towels and toiletries were not restocked regarding spa & wellness.,-1.0,Negative
+319,2024-12-08,Housekeeping,4,"Quick response to our requests, very efficient regarding housekeeping. Would recommend to others.",1.0,Positive
+235,2024-12-09,Front Desk,4,"Quick response to our requests, very efficient regarding front desk. Would recommend to others.",1.0,Positive
+13,2024-12-09,F&B / Restaurant,2,Staff seemed inattentive and slow to respond regarding f&b / restaurant. Would recommend to others.,-0.333,Negative
+429,2024-12-09,Concierge,5,Breakfast selection was excellent and fresh regarding concierge. Would recommend to others.,1.0,Positive
+277,2024-12-09,Concierge,5,The spa treatment was relaxing and professional regarding concierge. Would recommend to others.,1.0,Positive
+175,2024-12-09,Housekeeping,2,Check-in took far too long and felt disorganized regarding housekeeping. Thank you to the team.,-0.333,Negative
+519,2024-12-11,Front Desk,5,Staff greeted us warmly every single day regarding front desk.,1.0,Positive
+184,2024-12-11,Front Desk,5,Concierge went above and beyond to help us regarding front desk.,0.0,Neutral
+23,2024-12-11,Spa & Wellness,4,"Quick response to our requests, very efficient regarding spa & wellness.",1.0,Positive
+241,2024-12-12,Housekeeping,4,Breakfast selection was excellent and fresh regarding housekeeping.,1.0,Positive
+57,2024-12-13,F&B / Restaurant,4,The staff was incredibly friendly and helpful regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+516,2024-12-13,Housekeeping,5,The staff was incredibly friendly and helpful regarding housekeeping. Thank you to the team.,1.0,Positive
+515,2024-12-14,F&B / Restaurant,5,Concierge went above and beyond to help us regarding f&b / restaurant. Would recommend to others.,1.0,Positive
+45,2024-12-14,Front Desk,5,Room was spotless and beautifully maintained regarding front desk. Overall a decent trip.,1.0,Positive
+37,2024-12-14,Front Desk,3,"Room was okay, standard hotel amenities regarding front desk. Thank you to the team.",1.0,Positive
+280,2024-12-14,F&B / Restaurant,5,Staff greeted us warmly every single day regarding f&b / restaurant. Will definitely consider staying again.,1.0,Positive
+521,2024-12-17,Front Desk,4,Check-in was fast and seamless regarding front desk.,1.0,Positive
+397,2024-12-17,Spa & Wellness,3,"Average experience overall, met basic expectations regarding spa & wellness. Thank you to the team.",1.0,Positive
+326,2024-12-17,F&B / Restaurant,4,"Quick response to our requests, very efficient regarding f&b / restaurant. Will definitely consider staying again.",1.0,Positive
+345,2024-12-18,F&B / Restaurant,1,Room was not properly cleaned upon arrival regarding f&b / restaurant. Will definitely consider staying again.,-1.0,Negative
+140,2024-12-18,Concierge,2,Breakfast was cold and options were limited regarding concierge.,-1.0,Negative
+194,2024-12-18,Spa & Wellness,4,Room was spotless and beautifully maintained regarding spa & wellness.,1.0,Positive
+295,2024-12-18,Spa & Wellness,4,Loved the attention to detail in the room regarding spa & wellness. Thank you to the team.,1.0,Positive
+289,2024-12-20,Concierge,2,Room was not properly cleaned upon arrival regarding concierge. Would recommend to others.,0.0,Neutral
+353,2024-12-20,Spa & Wellness,5,Concierge went above and beyond to help us regarding spa & wellness. Thank you to the team.,1.0,Positive
+457,2024-12-20,Front Desk,4,The spa treatment was relaxing and professional regarding front desk. Would recommend to others.,1.0,Positive
+375,2024-12-21,Housekeeping,5,Check-in was fast and seamless regarding housekeeping. Thank you to the team.,1.0,Positive
+233,2024-12-21,Spa & Wellness,4,"Quick response to our requests, very efficient regarding spa & wellness.",1.0,Positive
+225,2024-12-21,F&B / Restaurant,4,Room was spotless and beautifully maintained regarding f&b / restaurant. Would recommend to others.,1.0,Positive
+36,2024-12-21,Spa & Wellness,5,Room was spotless and beautifully maintained regarding spa & wellness.,1.0,Positive
+411,2024-12-22,Housekeeping,3,"Stay was fine, nothing particularly memorable regarding housekeeping.",0.0,Neutral
+495,2024-12-23,F&B / Restaurant,5,The spa treatment was relaxing and professional regarding f&b / restaurant.,1.0,Positive
+541,2024-12-23,Concierge,1,Noise from the hallway disturbed our sleep regarding concierge. Thank you to the team.,-0.333,Negative
+205,2024-12-24,Housekeeping,1,Staff seemed inattentive and slow to respond regarding housekeeping. Will definitely consider staying again.,-1.0,Negative
+234,2024-12-24,Front Desk,5,Staff greeted us warmly every single day regarding front desk.,1.0,Positive
+477,2024-12-24,F&B / Restaurant,4,Breakfast selection was excellent and fresh regarding f&b / restaurant. Thank you to the team.,1.0,Positive
+172,2024-12-25,F&B / Restaurant,5,Staff greeted us warmly every single day regarding f&b / restaurant.,1.0,Positive
+407,2024-12-25,Housekeeping,2,Staff seemed inattentive and slow to respond regarding housekeeping. Will definitely consider staying again.,-1.0,Negative
+567,2024-12-25,Housekeeping,2,Towels and toiletries were not restocked regarding housekeeping. Would recommend to others.,-0.333,Negative
+346,2024-12-25,F&B / Restaurant,5,Check-in was fast and seamless regarding f&b / restaurant. Would recommend to others.,1.0,Positive
+332,2024-12-26,F&B / Restaurant,3,"Stay was fine, nothing particularly memorable regarding f&b / restaurant. Would recommend to others.",1.0,Positive
+6,2024-12-27,Concierge,3,"Service was acceptable, no major issues regarding concierge. Will definitely consider staying again.",-1.0,Negative
+464,2024-12-28,Housekeeping,3,"Average experience overall, met basic expectations regarding housekeeping.",0.0,Neutral
+4,2024-12-28,Concierge,4,Breakfast selection was excellent and fresh regarding concierge. Thank you to the team.,1.0,Positive
+408,2024-12-29,Front Desk,4,The staff was incredibly friendly and helpful regarding front desk. Thank you to the team.,1.0,Positive
+363,2024-12-30,Spa & Wellness,5,Staff greeted us warmly every single day regarding spa & wellness. Will definitely consider staying again.,1.0,Positive
+5,2024-12-30,F&B / Restaurant,5,Loved the attention to detail in the room regarding f&b / restaurant. Overall a decent trip.,1.0,Positive
