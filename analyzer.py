@@ -4,39 +4,37 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from textblob import TextBlob
 import re
 
-# Safely verify and download the required VADER lexicon dependency on initialization
 try:
     nltk.data.find('sentiment/vader_lexicon.zip')
+    nltk.data.find('tokenizers/punkt_tab')
 except LookupError:
     nltk.download('vader_lexicon', quiet=True)
+    nltk.download('punkt', quiet=True)
+    nltk.download('punkt_tab', quiet=True)
 
-# Initialize the Lexicon-Based Intensity Analyzer globally
 sia = SentimentIntensityAnalyzer()
 
 
 def analyze_guest_review(review_text):
     """
-    Advanced Hybrid NLP Pipeline.
-    Combines NLTK VADER Lexicon scoring with TextBlob structural subjectivity
-    analysis, maps aspect-based rule metrics, and builds response payloads.
+    Advanced Multi-Aspect Fine-Grained Sentiment Parser.
+    Tokenizes text into independent clauses to score individual operational aspects.
     """
-    # 1. Compute VADER Polarities
-    vader_scores = sia.polarity_scores(review_text)
-    compound = vader_scores['compound']
+    # Global metrics
+    global_vader = sia.polarity_scores(review_text)
+    global_compound = global_vader['compound']
 
-    # 2. Compute TextBlob Subjectivity Layer (0.0 = Objective, 1.0 = Highly Subjective)
     blob = TextBlob(review_text)
     subjectivity_percentage = round(blob.sentiment.subjectivity * 100, 1)
 
-    # 3. Categorize Final Sentiment Verdict based on Standard Academic Intervals
-    if compound >= 0.05:
-        sentiment = "Positive"
-    elif compound <= -0.05:
-        sentiment = "Negative"
+    if global_compound >= 0.05:
+        global_sentiment = "Positive"
+    elif global_compound <= -0.05:
+        global_sentiment = "Negative"
     else:
-        sentiment = "Neutral"
+        global_sentiment = "Neutral"
 
-    # 4. Aspect-Based Feature Extraction Mapping (Heuristic Sub-classification)
+    # Aspect configuration map
     categories = {
         "Staff & Service": ["staff", "service", "manager", "waiter", "reception", "rude", "helpful", "friendly",
                             "hospitality", "clerk", "crew"],
@@ -48,53 +46,60 @@ def analyze_guest_review(review_text):
                           "charge", "affordable"]
     }
 
+    # Sentence Tokenization for Fine-Grained Analysis
+    sentences = nltk.sent_tokenize(review_text)
+    aspect_scores = {}
     detected_aspects = []
-    lowered_text = review_text.lower()
 
-    for aspect, keywords in categories.items():
-        # Match keywords using strict word boundaries to avoid false substring matches
-        if any(re.search(rf'\b{kw}\b', lowered_text) for kw in keywords):
-            detected_aspects.append(aspect)
+    for sentence in sentences:
+        lowered_sentence = sentence.lower()
+        sentence_vader = sia.polarity_scores(sentence)
+        sentence_compound = sentence_vader['compound']
 
-    # Default fallback element if no strict categories are triggered
+        for aspect, keywords in categories.items():
+            if any(re.search(rf'\b{kw}\b', lowered_sentence) for kw in keywords):
+                if aspect not in aspect_scores:
+                    aspect_scores[aspect] = []
+                aspect_scores[aspect].append(sentence_compound)
+                if aspect not in detected_aspects:
+                    detected_aspects.append(aspect)
+
     if not detected_aspects:
         detected_aspects.append("General")
+        aspect_scores["General"] = [global_compound]
 
-    # 5. Generative Contextual CRM Response Draft Generator
-    aspect_string = ", ".join(detected_aspects)
-    if sentiment == "Negative":
-        reply_draft = f"Dear Guest, thank you for sharing your feedback with us. We deeply regret that your experience regarding {aspect_string} did not align with our quality standards. Our operational teams have been notified to review these parameters immediately."
-    elif sentiment == "Positive":
-        reply_draft = f"Thank you so much for your exceptional rating! We are delighted to hear our focus on {aspect_string} made your stay memorable. We look forward to welcoming you back during your next visit."
-    else:
-        reply_draft = f"Dear Guest, thank you for taking the time to share your review. We appreciate your objective assessment regarding {aspect_string} and will use it to continually refine our guest journey benchmarks."
+    # Calculate final fine-grained average valence per aspect
+    final_aspect_map = []
+    for aspect, scores in aspect_scores.items():
+        avg_score = sum(scores) / len(scores)
+        if avg_score >= 0.05:
+            verdict = "Positive"
+        elif avg_score <= -0.05:
+            verdict = "Negative"
+        else:
+            verdict = "Neutral"
+        final_aspect_map.append({
+            "name": aspect,
+            "score": round(avg_score, 2),
+            "verdict": verdict
+        })
 
-    # Return unified data payload structured perfectly for SQLite insertion rules
+    # Contextual CRM Response Draft Framework builder
+    aspect_strings = [f"{a['name']} ({a['verdict']})" for a in final_aspect_map]
+    reply_draft = f"Dear Guest, thank you for your feedback. We have evaluated your individual metric markers: {', '.join(aspect_strings)}. Your assessments have been forwarded directly to their respective department supervisors to align with our corporate standards."
+
     return {
         "raw_text": review_text,
-        "sentiment": sentiment,
-        "compound": compound,
-        "confidence": round(abs(compound) * 100, 1),
+        "sentiment": global_sentiment,
+        "compound": global_compound,
+        "confidence": round(abs(global_compound) * 100, 1),
         "subjectivity": subjectivity_percentage,
         "aspects": detected_aspects,
+        "aspect_map": final_aspect_map,  # Structured multi-verdict engine mapping array
         "reply_draft": reply_draft,
         "scores": {
-            "pos": round(vader_scores['pos'] * 100, 1),
-            "neg": round(vader_scores['neg'] * 100, 1),
-            "neu": round(vader_scores['neu'] * 100, 1)
+            "pos": round(global_vader['pos'] * 100, 1),
+            "neg": round(global_vader['neg'] * 100, 1),
+            "neu": round(global_vader['neu'] * 100, 1)
         }
     }
-
-
-# =====================================================================
-# SYSTEM VERIFICATION BLOCK
-# Allows isolated component debugging directly inside the terminal window
-# =====================================================================
-if __name__ == "__main__":
-    sample_text = "The room was incredibly dirty and the reception staff was quite rude, but the breakfast food was delicious."
-    print("Executing standalone pipeline diagnostics testing matrix...\n")
-    diagnostics_result = analyze_guest_review(sample_text)
-
-    import json
-
-    print(json.dumps(diagnostics_result, indent=4))

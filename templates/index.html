@@ -115,7 +115,7 @@
             </div>
         </section>
 
-<section class="lg:col-span-2 space-y-6">
+        <section class="lg:col-span-2 space-y-6">
 
     {% set total_records = s_data['Positive'] + s_data['Negative'] + s_data['Neutral'] %}
 
@@ -169,10 +169,17 @@
 
     <div id="view-batch" class="max-w-7xl mx-auto px-6 py-8 hidden app-view">
         <div class="glass-card p-6 rounded-2xl shadow-2xl space-y-4">
+           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div>
                 <h2 class="text-lg font-bold text-white">Relational Record Ledger</h2>
                 <p class="text-xs text-slate-400 mt-0.5">Reviewing active sequential entries committed directly into `sentiment_analytics.db` schema</p>
             </div>
+
+            <a href="/export-dataset"
+               class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-xl text-xs uppercase tracking-wider transition-all duration-200 shadow-md flex items-center gap-2 cursor-pointer">
+               <span>📥</span> Download Executive Report (.CSV)
+            </a>
+        </div>
             <div class="overflow-x-auto rounded-xl border border-slate-800">
                 <table class="w-full text-left text-xs border-collapse">
                     <thead>

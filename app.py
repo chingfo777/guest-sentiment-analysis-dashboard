@@ -6,6 +6,10 @@ import pandas as pd
 import os
 import sqlite3
 from database import DB_FILE
+# app.py - Add this endpoint to handle on-the-fly CSV generation
+import csv
+from io import StringIO
+from flask import Response
 
 app = Flask(__name__)
 init_db()
@@ -24,32 +28,37 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
+# app.py dashboard handler refactor
+
 @app.route('/', methods=['GET', 'POST'])
 def dashboard():
     last_processed_result = None
     is_single_mode = False
 
-    batch_count = 0
-    if request.method == 'GET':
+    # SAFE REFRESH TRACKING LAYER:
+    # Only clear metrics if it's a pure browser navigation line call (no bulk file redirect flags)
+    if request.method == 'GET' and not request.args.get('processed'):
         import sqlite3
         from database import DB_FILE
-        print("Page refresh detected. Flushing database metrics for a clean slate.")
-        conn = sqlite3.connect(DB_FILE)
-        cursor = conn.cursor()
-        cursor.execute("DELETE FROM guest_reviews")
-        cursor.execute("DELETE FROM review_aspects")
-        conn.commit()
-        conn.close()
+        try:
+            with sqlite3.connect(DB_FILE, timeout=20) as conn:
+                cursor = conn.cursor()
+                cursor.execute("DELETE FROM guest_reviews")
+                cursor.execute("DELETE FROM review_aspects")
+                conn.commit()
+                print("Database tables flushed successfully via structural GET refresh tracker.")
+        except Exception as e:
+            print(f"Non-fatal bypass on refresh lock: {e}")
 
     if request.method == 'POST':
-        # TRACK 1: HANDLE SINGLE TEXT SUBMISSION
+        # 1. Single text processing track
         if 'review_text' in request.form and request.form.get('review_text').strip():
             review_text = request.form.get('review_text').strip()
             last_processed_result = analyze_guest_review(review_text)
             save_analysis_node(last_processed_result)
             is_single_mode = True
 
-        # TRACK 2: HANDLE BULK SPREADSHEET BATCH FILE UPLOAD
+        # 2. Spreadsheet bulk data track
         elif 'spreadsheet_file' in request.files:
             file = request.files['spreadsheet_file']
             if file and file.filename != '':
@@ -75,30 +84,27 @@ def dashboard():
                         if raw_review and raw_review != 'nan':
                             analysis = analyze_guest_review(raw_review)
                             save_analysis_node(analysis)
+
                 except Exception as e:
-                    print(f"Error: {e}")
+                    print(f"Bulk ingestion engine failure logs: {e}")
                 finally:
                     if os.path.exists(file_path):
                         os.remove(file_path)
 
+                # FIXED: Redirect with an explicit argument flag to tell the GET controller NOT to clear data
+                return redirect(url_for('dashboard', processed=True))
 
-    # Update inside app.py dashboard route logic section:
-
-    # Fetch unified database telemetry arrays
+    # Pull out analytical summaries safely
     sentiment_distribution, aspect_distribution = get_aggregated_metrics()
     word_cloud_matrix = get_word_frequencies()
     timeline_trend_matrix = get_chronological_trends()
-
-    # NEW CORE EXPLICIT DATABASE LOG INJECTION FOR VIEW-BATCH DATATABLE
     import sqlite3
     from database import DB_FILE
-    conn = sqlite3.connect(DB_FILE)
-    cursor = conn.cursor()
-    # Pull top 50 rows from schema safely ordered chronologically
-    cursor.execute(
-        "SELECT id, strftime('%Y-%m-%d %H:%M', timestamp), review_text, sentiment_verdict, round(compound_score, 2) FROM guest_reviews ORDER BY id DESC LIMIT 50")
-    table_rows_matrix = cursor.fetchall()
-    conn.close()
+    with sqlite3.connect(DB_FILE, timeout=20) as conn:
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT id, strftime('%Y-%m-%d %H:%M', timestamp), review_text, sentiment_verdict, round(compound_score, 2) FROM guest_reviews ORDER BY id DESC LIMIT 50")
+        table_rows_matrix = cursor.fetchall()
 
     return render_template(
         'index.html',
@@ -107,10 +113,53 @@ def dashboard():
         a_data=aspect_distribution,
         cloud_words=word_cloud_matrix,
         timeline_data=timeline_trend_matrix,
-        table_rows=table_rows_matrix,  # <-- Pass rows array cleanly to template matrix bindings
-        is_single_mode = is_single_mode
+        table_rows=table_rows_matrix,
+        is_single_mode=is_single_mode
     )
 
 
+
+
+
+@app.route('/export-dataset')
+def export_dataset():
+    """Queries the live relational tables and streams a clean CSV file attachment."""
+    import sqlite3
+    from database import DB_FILE
+
+    # 1. Open string stream memory buffer
+    si = StringIO()
+    cw = csv.writer(si)
+
+    # 2. Write CSV Header Matrix
+    cw.writerow(['Record ID', 'Timestamp', 'Raw Review Text', 'Global Sentiment', 'Compound Score', 'Target Aspect',
+                 'Aspect Valence Score', 'Aspect Verdict'])
+
+    # 3. Pull data rows using an INNER JOIN across our relational tables
+    try:
+        with sqlite3.connect(DB_FILE, timeout=20) as conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                SELECT r.id, r.timestamp, r.review_text, r.sentiment_verdict, r.compound_score,
+                       a.aspect_name, a.aspect_score, a.aspect_verdict
+                FROM guest_reviews r
+                LEFT JOIN review_aspects a ON r.id = a.review_id
+                ORDER BY r.id DESC
+            """)
+            rows = cursor.fetchall()
+
+            for row in rows:
+                cw.writerow(row)
+    except Exception as e:
+        print(f"Export engine runtime exception: {e}")
+        cw.writerow(["Error generating export telemetry logs", str(e)])
+
+    # 4. Create response object pointing to attachment configuration structures
+    output = si.getvalue()
+    return Response(
+        output,
+        mimetype="text/csv",
+        headers={"Content-disposition": "attachment; filename=sentix_executive_report.csv"}
+    )
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
