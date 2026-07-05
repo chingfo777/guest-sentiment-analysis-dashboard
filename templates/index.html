@@ -96,6 +96,26 @@
                     </div>
                     <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl transition text-xs uppercase tracking-wider cursor-pointer">Ingest & Batch Process</button>
                 </form>
+<!--                <form action="/clear-all" method="POST" class="pt-2" onsubmit="return confirm('Are you absolutely sure you want to flush the entire SQL repository history? This cannot be undone.');">-->
+<!--            <button type="submit" class="w-full bg-slate-950/40 hover:bg-rose-950/30 text-slate-400 hover:text-rose-400 font-medium py-2.5 px-4 rounded-xl transition text-xs border border-slate-800 hover:border-rose-900/40 tracking-wide cursor-pointer flex items-center justify-center gap-2">-->
+<!--                🗑️ Clear Local Repository Logs-->
+<!--            </button>-->
+<!--        </form>-->
+                <div class="pt-2">
+    {% set total_records = s_data['Positive'] + s_data['Negative'] + s_data['Neutral'] %}
+
+    {% if total_records == 0 %}
+        <button type="button" disabled
+            class="w-full bg-slate-950/20 text-slate-600 font-medium py-2.5 px-4 rounded-xl text-xs border border-slate-900 tracking-wide cursor-not-allowed flex items-center justify-center gap-2 opacity-50">
+            🗑️ Repository Already Empty
+        </button>
+    {% else %}
+        <button type="button" onclick="toggleWipeModal(true)"
+            class="w-full bg-slate-950/40 hover:bg-rose-950/30 text-slate-400 hover:text-rose-400 font-medium py-2.5 px-4 rounded-xl transition text-xs border border-slate-800 hover:border-rose-900/40 tracking-wide cursor-pointer flex items-center justify-center gap-2">
+            🗑️ Clear Local Repository Logs
+        </button>
+    {% endif %}
+</div>
                 <div class="pt-4 border-t border-slate-800/80 space-y-3">
                     <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Operational Repository Log</span>
                     <div class="grid grid-cols-3 gap-2 text-center">
@@ -180,6 +200,14 @@
                <span>📥</span> Download Executive Report (.CSV)
             </a>
         </div>
+            <div class="flex flex-wrap items-center gap-3 bg-slate-950/40 p-3 rounded-xl border border-slate-800/40 text-xs">
+            <span class="text-slate-400 font-semibold uppercase tracking-wider mr-2">Telemetry Filters:</span>
+            <button onclick="applyLedgerFilter('all')" id="btn-filt-all" class="px-3 py-1.5 rounded-lg bg-indigo-500 text-white font-bold cursor-pointer transition-all">Show All Records</button>
+            <button onclick="applyLedgerFilter('Negative')" id="btn-filt-neg" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-rose-400 font-medium cursor-pointer transition-all border border-slate-800">Operational Negatives</button>
+            <button onclick="applyLedgerFilter('Positive')" id="btn-filt-pos" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-emerald-400 font-medium cursor-pointer transition-all border border-slate-800">Operational Positives</button>
+            <button onclick="applyLedgerFilter('Staff & Service')" id="btn-filt-staff" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-indigo-400 font-medium cursor-pointer transition-all border border-slate-800">Staff & Service Specifics</button>
+            <button onclick="applyLedgerFilter('Cleanliness & Room')" id="btn-filt-room" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-purple-400 font-medium cursor-pointer transition-all border border-slate-800">Cleanliness Specifics</button>
+        </div>
             <div class="overflow-x-auto rounded-xl border border-slate-800">
                 <table class="w-full text-left text-xs border-collapse">
                     <thead>
@@ -208,6 +236,22 @@
                                 </td>
                                 <td class="p-4 font-mono font-semibold {% if row[4] >= 0.05 %} text-emerald-400 {% elif row[4] <= -0.05 %} text-rose-400 {% else %} text-amber-400 {% endif %}">{{ row[4] }}</td>
                             </tr>
+                            <tr class="ledger-row-node hover:bg-slate-800/30 transition"
+        data-verdict="{{ row[3] }}"
+        data-text-payload="{{ row[2]|lower }}">
+        <td class="p-4 font-mono text-slate-500">#{{ row[0] }}</td>
+        <td class="p-4 text-slate-400 font-medium">{{ row[1] }}</td>
+        <td class="p-4 text-slate-200 truncate max-w-xs italic">"{{ row[2] }}"</td>
+        <td class="p-4">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase
+                {% if row[3] == 'Positive' %} bg-emerald-500/10 text-emerald-400
+                {% elif row[3] == 'Negative' %} bg-rose-500/10 text-rose-400
+                {% else %} bg-amber-500/10 text-amber-400 {% endif %}">
+                {{ row[3] }}
+            </span>
+        </td>
+        <td class="p-4 font-mono font-semibold {% if row[4] >= 0.05 %} text-emerald-400 {% elif row[4] <= -0.05 %} text-rose-400 {% else %} text-amber-400 {% endif %}">{{ row[4] }}</td>
+    </tr>
                             {% endfor %}
                         {% else %}
                             <tr><td colspan="5" class="p-8 text-center text-slate-500 italic">No operational files or text records detected inside SQLite repository.</td></tr>
@@ -247,7 +291,35 @@
             </div>
         </div>
     </div>
+<div id="wipe-confirmation-modal" class="fixed inset-0 bg-[#0b1329]/80 backdrop-blur-md z-[10000] hidden items-center justify-center p-4 transition-all duration-300">
+    <div class="glass-card max-w-sm w-full p-6 rounded-2xl shadow-2xl space-y-5 border border-rose-500/10 text-center relative">
 
+        <div class="w-12 h-12 bg-rose-500/10 border border-rose-500/20 text-rose-400 rounded-full flex items-center justify-center text-xl mx-auto shadow-lg shadow-rose-500/5">
+            ⚠️
+        </div>
+
+        <div class="space-y-1.5">
+            <h3 class="text-sm font-bold tracking-tight text-white">Flush Relational Data Schemas?</h3>
+            <p class="text-xs text-slate-400 leading-relaxed px-2">
+                Are you absolutely sure you want to clear the entire SQLite repository history? This action cannot be undone.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 pt-2 text-xs font-semibold">
+            <button type="button" onclick="toggleWipeModal(false)"
+                class="w-full bg-slate-900 hover:bg-slate-800 text-slate-400 py-2.5 px-4 rounded-xl border border-slate-800 transition cursor-pointer transition-all uppercase tracking-wider">
+                No
+            </button>
+
+            <form action="/clear-all" method="POST" class="w-full">
+                <button type="submit"
+                    class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2.5 px-4 rounded-xl transition cursor-pointer shadow-lg shadow-rose-500/10 uppercase tracking-wider">
+                    Yes
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
     <script>
         function navigateTo(targetViewId) {
             // Hide all subview modules instantly
@@ -377,6 +449,30 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+
+        /**
+ * Toggles the visibility of the Custom Wipe Confirmation Modal.
+ * @param {boolean} shouldOpen - Passes true to show the modal, false to hide it.
+ */
+function toggleWipeModal(shouldOpen) {
+    const confirmationModal = document.getElementById('wipe-confirmation-modal');
+
+    if (!confirmationModal) {
+        console.error("Modal element '#wipe-confirmation-modal' not found in the DOM.");
+        return;
+    }
+
+    if (shouldOpen) {
+        // Remove 'hidden' class and add 'flex' to align center via Tailwind classes
+        confirmationModal.classList.remove('hidden');
+        confirmationModal.classList.add('flex');
+    } else {
+        // Add 'hidden' class to immediately remove the overlay from the viewport
+        confirmationModal.classList.add('hidden');
+        confirmationModal.classList.remove('flex');
+    }
+}
     </script>
 </body>
 </html>

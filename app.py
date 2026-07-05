@@ -125,6 +125,9 @@ def dashboard():
 def export_dataset():
     """Queries the live relational tables and streams a clean CSV file attachment."""
     import sqlite3
+    import csv
+    from io import StringIO
+    from flask import Response
     from database import DB_FILE
 
     # 1. Open string stream memory buffer
@@ -152,7 +155,7 @@ def export_dataset():
                 cw.writerow(row)
     except Exception as e:
         print(f"Export engine runtime exception: {e}")
-        cw.writerow(["Error generating export telemetry logs", str(e)])
+        # cw.writerow(["Error generating export telemetry logs", str(e)])
 
     # 4. Create response object pointing to attachment configuration structures
     output = si.getvalue()
@@ -161,5 +164,25 @@ def export_dataset():
         mimetype="text/csv",
         headers={"Content-disposition": "attachment; filename=sentix_executive_report.csv"}
     )
+
+
+# app.py - Explicit Database Truncation Route Handler
+@app.route('/clear-all', methods=['POST'])
+def clear_all_data():
+    """Wipes out all tables in the SQLite database to reset the application state."""
+    import sqlite3
+    from database import DB_FILE
+    try:
+        with sqlite3.connect(DB_FILE, timeout=20) as conn:
+            cursor = conn.cursor()
+            cursor.execute("DELETE FROM guest_reviews")
+            cursor.execute("DELETE FROM review_aspects")
+            conn.commit()
+            print("Database completely flushed via explicit Clear All action button request.")
+    except Exception as e:
+        print(f"Exception encountered during manual data wipe: {e}")
+
+    # Redirect cleanly to show the empty dormant state placeholder
+    return redirect(url_for('dashboard'))
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
