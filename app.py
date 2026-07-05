@@ -12,6 +12,16 @@ from io import StringIO
 from flask import Response
 
 app = Flask(__name__)
+import nltk
+
+try:
+    nltk.data.find('sentiment/vader_lexicon.zip')
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    print("Render Inbound Cache: Downloading missing NLTK packages...")
+    nltk.download('vader_lexicon', quiet=True)
+    nltk.download('punkt', quiet=True)
+    nltk.download('punkt_tab', quiet=True)
 init_db()
 
 print("Initializing fresh session... Flushing previous operational metrics.")
@@ -185,4 +195,8 @@ def clear_all_data():
     # Redirect cleanly to show the empty dormant state placeholder
     return redirect(url_for('dashboard'))
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    import os
+    init_db()
+    # Render dynamic port allocation matrix
+    port = int(os.environ.get("PORT", 5001))
+    app.run(host='0.0.0.0', port=port)
